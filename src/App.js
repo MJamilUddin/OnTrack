@@ -14,6 +14,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import Origin from "./pages/Origin";
 import Courses from "./pages/courses";
 import NavBar from "./components/navBar";
+import MiniDrawer from "./components/navBar2";
 import TopBar from "./components/topBar";
 import Login from "./pages/login";
 import Register from "./pages/register";
@@ -61,9 +62,9 @@ function App() {
 						}}>
 						{userData !== null?
 							<UserContext.Provider value={userData}>
-							<NavBar />
+							<MiniDrawer />
 							<div style={{display: "flex", flexDirection: 'column'}}>
-							{/* <TopBar /> */}
+							<TopBar />
 							<Routes>
 								<Route path="/" element={<Origin />} />
 								<Route path="/login" element={<Redirect />} />
