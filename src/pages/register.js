@@ -59,7 +59,7 @@ const Register = () => {
 								fontSize: 21,
 								fontWeight: "900",
 							}}>
-							Welcome back, Farzanah!
+							Create an account, Farzanah!
 						</text>
 					</div>
 

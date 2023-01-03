@@ -13,36 +13,51 @@ const SpecView = () => {
 
 	const courseObj = specPicker(state.name);
 	const [completeArray, setCompleteArray] = useState();
+	const [highlight, setHighlight] = useState(-1);
 
-	const gettingCompleteArray = async() => {
+	const gettingCompleteArray = async () => {
 		const data = await getCompleteArray(userData.uid, state.name);
 		// console.log('complete Array', data.completeArray);
 		if (data.completeArray !== undefined) {
 			setCompleteArray(data.completeArray);
 		} else {
-			setCompleteArray([])
+			setCompleteArray([]);
 		}
-		
 	};
 
 	useEffect(() => {
-		gettingCompleteArray()
+		gettingCompleteArray();
 	}, []);
 
-	return (
-		<div style={{ display: "flex", flexDirection: "column", marginLeft: 30 }}>
-			<h1>{courseObj[1].name}</h1>
+	const shouldBeShown = (num) => {
+		if (highlight === -1) {
+			return true 
+		} else if (highlight === num) {
+			return true 
+		} else {
+			return false
+		}
 
-			<div style={{backgroundColor: 'white', width: 1000, height: 800, padding: 40, borderRadius: 32, overflow: 'scroll'}}>
+	}
+
+	return (
+		<div style={{ display: "flex", flexDirection: "column", marginLeft: 100 }}>
+			<h2>{courseObj[1].name}</h2>
+
+			<div style={{ width: 1320, height: 800, paddingBottom: 20, overflow: "scroll", marginBottom: 10, }}>
 				{Object.keys(courseObj).map((key, index) => {
-					return <SpecBlock course={courseObj} num={key} completeArray={completeArray} />;
+					return (
+						<SpecBlock
+							course={courseObj}
+							num={key}
+							completeArray={completeArray}
+							isSelected={shouldBeShown(key)}
+							setHighlight={setHighlight}
+						/>
+					);
 				})}
 			</div>
-
-			
 		</div>
-
-
 	);
 };
 

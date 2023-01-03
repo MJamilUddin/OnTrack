@@ -42,7 +42,7 @@ const Login = () => {
 				}}>
 				<div
 					style={{
-						boxShadow: "2px 1px 9px grey",
+						boxShadow: "0.5px 0.5px 14px grey",
 						margin: "4em",
 						padding: "1em",
 						width: 550,

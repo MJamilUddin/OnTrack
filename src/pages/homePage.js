@@ -24,7 +24,7 @@ const HomePage = () => {
 
 	return (
 		<div style={{ marginLeft: 30 }}>
-			<h2>My Subjects</h2>
+			<h2 style={{marginLeft: 50}}>My Subjects</h2>
 			{courseInfo !== null ? (
 				<div
 					style={{

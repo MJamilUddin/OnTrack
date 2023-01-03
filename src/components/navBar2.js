@@ -116,12 +116,16 @@ export default function MiniDrawer() {
 				<DrawerHeader>
 					<img
 						src="/images/logo.png"
-						style={{ width: 130, height: 21, marginTop: 10 }}
+						style={{ width: 130, height: 21, marginTop: 10, }}
 					/>
+
+					<div style={{Left: 20}}> 
 					<IconButton onClick={open ? handleDrawerClose : handleDrawerOpen}>
 						{!open ? (
 							<ChevronRightIcon
 								style={{
+									marginTop: 10,
+									marginLeft: 30,
 									backgroundColor: "#806FEA",
 									borderRadius: 24,
 									color: "white",
@@ -133,6 +137,8 @@ export default function MiniDrawer() {
 						) : (
 							<ChevronLeftIcon
 								style={{
+									marginTop: 10,
+									marginLeft: 10,
 									backgroundColor: "#806FEA",
 									borderRadius: 24,
 									color: "white",
@@ -142,11 +148,13 @@ export default function MiniDrawer() {
 							/>
 						)}
 					</IconButton>
+					</div>
 				</DrawerHeader>
 
 				<List>
 					{open ? (
-						<div
+						<button
+						onClick={() => navigate("/home")}
 							style={{
 								display: "flex",
 								width: 195,
@@ -163,10 +171,10 @@ export default function MiniDrawer() {
 								style={{ color: "white", marginRight: 10 }}
 							/>
 							<text style={{ color: "white" }}>Dashboard</text>
-							<ExpandLessRoundedIcon
+							{/* <ExpandLessRoundedIcon
 								style={{ color: "white", marginLeft: 10 }}
-							/>
-						</div>
+							/> */}
+						</button>
 					) : (
 						<div
 							style={{
@@ -188,10 +196,7 @@ export default function MiniDrawer() {
 					)}
 
 					{[
-						{ text: "To do", link: "/home" },
-						{ text: "Resources", link: "/courses" },
-						{ text: "Calender", link: "/home" },
-						{ text: "Settings", link: "/home" },
+						{ text: "Courses", link: "/courses", img: "/images/coursesImg.png" },
 					].map((item, index) => (
 						<ListItem
 							key={index}
@@ -210,7 +215,7 @@ export default function MiniDrawer() {
 										mr: open ? 3 : "auto",
 										justifyContent: "center",
 									}}>
-									{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+									<img src={item.img} />
 								</ListItemIcon>
 								<ListItemText
 									primary={item.text}
@@ -222,7 +227,8 @@ export default function MiniDrawer() {
 				</List>
 				<Divider />
 				<List>
-					{[{ text: "Logout", link: "/login" }].map((item, index) => (
+					{[{ text: "Settings", link: "/login", img: "images/settingsImg.png" }, 
+					{text: "Logout", link: "/login", img: "images/logoutImg.png"}].map((item, index) => (
 						<ListItem
 							key={index}
 							disablePadding
@@ -243,7 +249,7 @@ export default function MiniDrawer() {
 										mr: open ? 3 : "auto",
 										justifyContent: "center",
 									}}>
-									{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+									<img src={item.img} />
 								</ListItemIcon>
 								<ListItemText
 									primary={item.text}

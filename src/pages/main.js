@@ -35,7 +35,7 @@ const Main = () => {
 				display: "flex",
 				flexDirection: "column",
 				backgroundColor: "#F8F6FF",
-				height: "100vh",
+				height: "200%",
 				minHeight: "100vh",
 				width: width,
 				minWidth: "100vh",
@@ -73,7 +73,7 @@ const Main = () => {
 				style={{
 					display: "flex",
 					flexDirection: "row",
-					marginTop: 60,
+					marginTop: 150,
 				}}>
 				<div
 					style={{
@@ -82,7 +82,7 @@ const Main = () => {
 						marginRight: 20,
 					}}>
                     <div style={{marginTop: 80}} /> 
-					<text style={{fontFamily: 'inherit', fontSize: 65, fontWeight: '900', lineHeight: 1.1}}> Making studying <br /> easier {"&"} hassle free</text>
+					<text style={{fontFamily: 'inherit', fontSize: 65, fontWeight: '900', lineHeight: 1.1, color: '#242220'}}> Making studying <br /> easier {"&"} hassle free</text>
                     <div style={{marginTop: 40}} /> 
                     <text style={{marginTop: 20, color: '#8F8F8F', fontFamily: 'inherit', fontSize: 25, fontWeight: '900'}}> 
                     We provide you with correct information from
@@ -96,7 +96,7 @@ const Main = () => {
 				style={{
 					display: "flex",
 					flexDirection: "row",
-					marginTop: 100,
+					marginTop: 200,
                     marginLeft: 50,
 				}}>
                     <img src="/images/main2.png" />

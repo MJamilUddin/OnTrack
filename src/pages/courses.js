@@ -7,7 +7,7 @@ const Courses = () => {
 	let navigate = useNavigate();
 	return (
 		<div style={{ marginLeft: 30 }}>
-			<h2>Add Subjects</h2>
+			<h2 style={{marginLeft: 50}}>Add Subjects</h2>
 			<div
 				style={{
 					display: "flex",

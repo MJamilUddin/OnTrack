@@ -12,10 +12,11 @@ const TopBar = () => {
 				display: "flex",
 				flexDirection: "column",
 				height: 150,
-				width: width - width/5,
+				width: width - width/6,
 				borderRadius: 20,
 				justifyContent: "center",
-                alignItems: 'flex-end'
+                alignItems: 'flex-end',
+                marginTop: 30
 			}}>
             <div style={{display: 'flex', flexDirection: 'row'}}>
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>
@@ -29,7 +30,7 @@ const TopBar = () => {
                     King Solomon Academy
                 </text>
             </div>
-            <img src="/images/defaultProfile.png" style={{marginLeft: 10 }} />
+            <img src="/images/defaultProfile.png" style={{marginLeft: 10, width: 50, height: 50 }} />
             </div>
 			
 		</div>

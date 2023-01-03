@@ -9,8 +9,8 @@ export const CourseBox = (props) => {
             style={{
                 display: "flex",
                 flexDirection: "column",
-                width: 320,
-                height: 200,
+                width: 300,
+                height: 170,
                 background: "blue",
                 borderRadius: 34,
                 alignItems: "center",
@@ -23,16 +23,16 @@ export const CourseBox = (props) => {
             onClick={() => {
                 navigate(props.navigate, {state: props.state});
             }}>
-                <div style={{width: 320, height: 50, marginTop: 20, marginLeft: 30}}>
-                    <text style={{size: 28}}>{props.name}</text>
+                <div style={{width: 320, height: 50, marginTop: 35, marginLeft: 90}}>
+                    <text style={{size: 28, fontWeight: 'bold'}}>{props.name}</text>
                     <br />
-                    <text style={{size: 28, color: '#8F8F8F'}}>GCSE, AQA</text>
+                    <text style={{size: 28, color: '#8F8F8F', fontWeight: '600'}}>GCSE</text>
                 </div>
                 <div style={{display: 'flex', flexDirection: 'row',}}>
-                    <div style={{display: 'flex', width: 100, height: 100, borderRadius: 32, justifyContent: 'center', alignItems: 'center'}}> 
-                        <text>30%</text>
+                    <div style={{display: 'flex', width: 100, height: 100, borderRadius: 32, justifyContent: 'flex-start', alignItems: 'center', marginLeft: 0}}> 
+                        <text style={{fontWeight: '900', fontSize: 20}}>30%</text>
                     </div>
-                    <div style={{display: 'flex', width: 100, height: 100, borderRadius: 32, backgroundColor: '#FDF7E9', justifyContent: 'center', alignItems: 'center'}}>
+                    <div style={{display: 'flex', width: 100, height: 100, borderRadius: 32, backgroundColor: '', justifyContent: 'center', alignItems: 'center', marginLeft: 30}}>
                         d
                     </div>
 
