@@ -44,7 +44,7 @@ const SpecView = () => {
 		<div style={{ display: "flex", flexDirection: "column", marginLeft: 100 }}>
 			<h2>{courseObj[1].name}</h2>
 
-			<div style={{ width: 1320, height: 800, paddingBottom: 20, overflow: "scroll", marginBottom: 10, }}>
+			<div style={{ width: 1320, height: 800, paddingBottom: 20, overflow: "scroll", marginBottom: 10, marginTop: 30 }}>
 				{Object.keys(courseObj).map((key, index) => {
 					return (
 						<SpecBlock

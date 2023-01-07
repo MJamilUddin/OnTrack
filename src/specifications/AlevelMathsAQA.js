@@ -23,7 +23,7 @@ export const AlevelMathsAQA = {
 		topic: "Algebra and functions",
 		subs: {
 			2.1: {
-				"sub-topic": "Part 1",
+				"sub-topic": "Differentiation",
 				spec: {
 					2.11: "Understand and use the laws of indices for all rational exponents",
 					2.12: "Use and manipulate surds, including rationalising the denominator.",
@@ -35,7 +35,7 @@ export const AlevelMathsAQA = {
 				},
 			},
 			2.2: {
-				"sub-topic": "Part 2",
+				"sub-topic": "Integrations",
 				spec: {
 					2.20: "Manipulate polynomials algebraically, including expanding brackets and collecting like terms, factorisation and simple algebraic division; use of the factor theorem.",
 					2.21: "Simplify rational expressions including by factorising and cancelling, and algebraic division (by linear expressions only).",

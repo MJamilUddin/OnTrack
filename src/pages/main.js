@@ -109,7 +109,7 @@ const Main = () => {
                     
                     <div style={{marginTop: 180}} /> 
                     <text style={{marginTop: 20, color: '#8F8F8F', fontFamily: 'inherit', fontSize: 20, fontWeight: '900'}}> 
-                    OnTrack is built on the belief that studying should not be difficult, and that anyone that is looking for educational materials should be able to find it - with ease. 
+                    OnTrack is built on the belief that studying should be easy and accessible for all students. Our platform offers a wide range of resources and materials for various subjects and exam boards, making it easy for anyone to find what they need. Our goal is to empower and support all learners through education.
                     </text>
 				</div>
 				
@@ -129,7 +129,7 @@ const Main = () => {
 					}}>
                     <div style={{marginTop: 180}} /> 
                     <text style={{marginTop: 20, color: '#8F8F8F', fontFamily: 'inherit', fontSize: 20, fontWeight: '900'}}> 
-                    We have layed out the educational resources under the specification.
+                    We have organised our educational resources according to the exam board specification to make it easy for students to find the specific information they need. By searching for their subject and exam board, students can quickly access relevant resources and save time in their studies. This approach helps students stay focused and achieve better academic outcomes.
                     </text>
 				</div>
 				<img src="/images/main3.png" />

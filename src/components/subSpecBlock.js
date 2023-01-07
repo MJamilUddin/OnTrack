@@ -17,9 +17,8 @@ const SubBlock = (props) => {
 		<>
 			<div
 				style={{
-					border: "1px solid black",
-					width: 700,
-					backgroundColor: isOpen ? "#FABB18" : "green",
+					width: 1280,
+					backgroundColor: isOpen ? "#EEF1FD" : "#D9E1FF",
 					display: "flex",
 					margin: 20,
 					height: "auto",
@@ -29,8 +28,8 @@ const SubBlock = (props) => {
 					justifyContent: "space-between",
 				}}
 				onClick={() => setIsOpen(!isOpen)}>
-				<text style={{ fontSize: 22, color: isOpen ? "black" : "white" }}>
-					{sub} {courseObj[key].subs[sub]["sub-topic"]}
+				<text style={{ fontSize: 22, color: isOpen ? "black" : "black" }}>
+				{sub} {courseObj[key].subs[sub]["sub-topic"]}
 				</text>
 			</div>
 

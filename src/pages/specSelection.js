@@ -25,7 +25,7 @@ function SpecSelection() {
 				borderRadius: 34,
 				marginTop: 60,
 				marginLeft: 100,
-				width: 800,
+				width: 1300,
 				height: 400
 			}}>
 			<text style={{fontSize: 28, marginLeft: 30, marginTop: 40, marginBottom: 30}}>Specifications</text>
@@ -46,7 +46,7 @@ function SpecSelection() {
 							marginLeft: 22
 						}}>
 						<text style={{fontWeight: 900, marginLeft: 20, }}>{course.name}</text>
-						<button style={{ width: 90, height: 40, borderRadius: 10, backgroundColor: '#FABB18', marginRight: 20, border: 'none' }}
+						<button style={{ width: 90, height: 40, borderRadius: 10, backgroundColor: '#FABB18', marginRight: 20,  }}
                             onClick={() => {addSubCollection(userData.uid, course.code)}}
                         > 
 						<text style={{fontWeight: 900, fontSize: 16}}>Add</text>

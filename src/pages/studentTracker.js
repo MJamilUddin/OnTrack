@@ -39,7 +39,7 @@ const StudentTracker = (props) => {
 				</div>
 				<div style={{marginLeft: 20}}>
                     
-					<text style={{ fontSize: 15, color: "black" }}>
+					<text style={{ fontSize: 17, color: "black" }}>
 						{props.specification}
 					</text>
 				</div>
@@ -57,11 +57,15 @@ const StudentTracker = (props) => {
 				}}>
 				<button
 					style={{
-						width: 50,
-						height: 50,
-						backgroundColor: checked ? "#D1F5EA" : "white",
+						display: 'flex',
+						width: 35,
+						height: 35,
+						backgroundColor: checked ? "#D1F5EA" : "#DEDEDE",
 						borderRadius: 30,
-                        border: '2px solid black'
+						justifyContent: 'center',
+						alignItems: 'center',
+						border: 'none',
+
 					}}
 					onClick={() => {
 						setChecked(!checked);

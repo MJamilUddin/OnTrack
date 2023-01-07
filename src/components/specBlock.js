@@ -6,6 +6,9 @@ import SubBlock from "./subSpecBlock";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
+import KeyboardArrowLeftRoundedIcon from '@mui/icons-material/KeyboardArrowLeftRounded';
+import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
+import NavigateBeforeRoundedIcon from '@mui/icons-material/NavigateBeforeRounded';
 
 const SpecBlock = (props) => {
 	const courseObj = props.course;
@@ -28,17 +31,17 @@ const SpecBlock = (props) => {
 							width: 1300,
 							borderRadius: 10,
 							marginBottom: 0,
-							backgroundColor: isOpen ? "#FAEFCA" : "white",
+							backgroundColor: isOpen ? "white" : "white",
 							alignItems: "center",
 							justifyContent: "space-between",
-							marginBottom: 15,
+							marginBottom: 25,
 							zIndex: 0,
 						}}>
 						<div
 							style={{
 								display: "flex",
 								width: 1300 * perc,
-								height: 25,
+								height: 10,
 								backgroundColor: "#D6DFFF",
 								marginBottom: 0,
 								zIndex: 1,
@@ -53,7 +56,7 @@ const SpecBlock = (props) => {
 								width: 1300,
 								borderRadius: 10,
 								marginBottom: 0,
-								backgroundColor: isOpen ? "#FAEFCA" : "white",
+								backgroundColor: isOpen ? "white" : "white",
 								alignItems: "center",
 								justifyContent: "space-between",
 								zIndex: 0,
@@ -81,7 +84,7 @@ const SpecBlock = (props) => {
 							<text
 								style={{
 									color: "black",
-									fontSize: 25,
+									fontSize: 23,
 									fontWeight: "350",
 									fontFamily: "sans-serif",
 									marginLeft: 40,
@@ -91,7 +94,7 @@ const SpecBlock = (props) => {
 								{courseObj[key].topic}
 							</text>
 
-							<div style={{display: "flex", flexDirection: "row"}}>
+							<div style={{ display: "flex", flexDirection: "row" }}>
 								<text
 									style={{
 										color: "black",
@@ -115,52 +118,59 @@ const SpecBlock = (props) => {
 										justifyContent: "center",
 										alignItems: "center",
 									}}>
-									<KeyboardArrowRightRoundedIcon
-										style={{ color: "white" }}
-										fontSize="medium"
-									/>
+									{props.isSelected? (
+										<KeyboardArrowRightRoundedIcon
+											style={{ color: "white" }}
+											fontSize="medium"
+										/>
+									) : (
+										<KeyboardArrowDownRoundedIcon
+											style={{ color: "white" }}
+											fontSize="medium"
+										/>
+									)}
 								</div>
 							</div>
 						</div>
 					</div>
 
 					{isOpen === true ? (
-						// <div>
-						// 	{Object.keys(courseObj[key].subs).map((sub, index) => {
-						// 		return (
-						// 			<div>
-						// 				<SubBlock
-						// 					course={courseObj}
-						// 					num={sub}
-						// 					keyNum={key}
-						// 					completeArray={completeArray}
-						// 				/>
-						// 			</div>
-						// 		);
-						// 	})}
-						// </div>
 						<div>
-							{Object.keys(courseObj[key].subs[`${key}.1`]["spec"]).map(
-								(specs, index) => {
-									const isThere =
-										completeArray !== undefined
-											? completeArray.includes(specs)
-											: false;
-									return (
-										<div>
-											<StudentTracker
-												specNumber={specs}
-												specification={
-													courseObj[key].subs[`${key}.1`].spec[specs]
-												}
-												checked={isThere}
-												course={courseObj}
-											/>
-										</div>
-									);
-								}
-							)}
+							{Object.keys(courseObj[key].subs).map((sub, index) => {
+								return (
+									<div>
+										<SubBlock
+											course={courseObj}
+											num={sub}
+											keyNum={key}
+											completeArray={completeArray}
+										/>
+									</div>
+								);
+							})}
 						</div>
+						// <div>
+						// 	{Object.keys(courseObj[key].subs[`${key}.1`]["spec"]).map(
+						// 		(specs, index) => {
+						// 			const isThere =
+						// 				completeArray !== undefined
+						// 					? completeArray.includes(specs)
+						// 					: false;
+						// 			return (
+						// 				<div>
+						// 					<StudentTracker
+						// 						specNumber={specs}
+						// 						specification={
+						// 							courseObj[key].subs[`${key}.1`].spec[specs]
+						// 						}
+						// 						checked={isThere}
+						// 						course={courseObj}
+						// 					/>
+						// 				</div>
+						// 			);
+						// 		}
+						// 	)}
+						// </div>
 					) : (
 						<div />
 					)}
