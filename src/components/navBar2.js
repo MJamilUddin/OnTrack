@@ -110,7 +110,7 @@ export default function MiniDrawer() {
 	};
 
 	return (
-		<Box sx={{ display: "flex" }}>
+		<Box sx={{ display: "flex", boxShadow: "8px 12px 16px #F2F2F2"}} >
 			<CssBaseline />
 			<Drawer variant="permanent" open={open}>
 				<DrawerHeader>

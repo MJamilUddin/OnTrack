@@ -16,8 +16,7 @@ export const CourseBox = (props) => {
                 alignItems: "center",
                 justifyContent: "flex-start",
                 margin: 8,
-                // border: "1px solid black",
-                // backgroundImage: `url(${props.image})`,
+                boxShadow: "8px 12px 16px #F2F2F2",
                 backgroundColor: 'white'
             }}
             onClick={() => {

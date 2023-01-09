@@ -23,6 +23,8 @@ import Redirect from "./pages/loginRedirect";
 import HomePage from "./pages/homePage";
 import SpecView from "./components/specView";
 import SpecSelection from "./pages/specSelection";
+import AboutUs from "./pages/aboutUs";
+import FAQ from "./pages/faq";
 
 export const UserContext = React.createContext();
 
@@ -51,6 +53,8 @@ function App() {
 						<Route path="/" element={<Main />} />
 						<Route path="/login" element={<Login />} />
 						<Route path="/register" element={<Register />} />
+						<Route path="/aboutUs" element={<AboutUs />} />
+						<Route path="/faq" element={<FAQ />} />
 					</Routes>
 				) : (
 					<div
