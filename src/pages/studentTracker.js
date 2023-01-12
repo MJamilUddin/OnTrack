@@ -10,12 +10,24 @@ const StudentTracker = (props) => {
 	const [checked, setChecked] = useState(props.checked);
 	const [otherChecked, setOtherChecked] = useState(false);
 
+	const instantAdjustment = () => {
+		const doesInclude =  props.completeArray.includes(props.specNumber);
+
+		if (doesInclude) {
+			const filteredArr = props.completeArray.filter(spec => { return spec !== props.specNumber });
+			props.setCompleteArray(filteredArr);
+		} else {
+			props.setCompleteArray(prev => [...prev, props.specNumber])
+		}
+	}
+
 	const addingToCompleteArray = async () => {
 		await addToCompleteArray(
 			userData.uid,
 			props.course[1].code,
 			props.specNumber
 		);
+
 	};
 
 	return (
@@ -70,6 +82,7 @@ const StudentTracker = (props) => {
 					onClick={() => {
 						setChecked(!checked);
 						addingToCompleteArray();
+						instantAdjustment();
 					}}
 				>
                     {checked? 

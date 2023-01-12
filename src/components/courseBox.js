@@ -1,8 +1,34 @@
 import { useNavigate } from "react-router-dom";
+import { specPicker } from "../functions/specPicker";
+import { getCompleteArray } from "../services/firebase";
+import { useEffect, useState, useContext } from "react";
+import { findSpecAmount } from "../functions/courseFuncs";
+import { UserContext } from "../App";
 
 
 export const CourseBox = (props) => {
     const navigate = useNavigate();
+    const userData = useContext(UserContext);
+    const courseObj = specPicker(props.state.name);
+	const [completeArray, setCompleteArray] = useState();
+	const [completePercentage, setCompletePercentage] = useState(0);
+
+	const gettingCompleteArray = async () => {
+		const data = await getCompleteArray(userData.uid, props.state.name);
+		// console.log('complete Array', data.completeArray);
+		if (data.completeArray !== undefined) {
+			setCompleteArray(data.completeArray);
+			
+			const percentageNumber = data.completeArray.length/findSpecAmount(courseObj);
+			setCompletePercentage(parseFloat(percentageNumber.toFixed(2)))
+		} else {
+			setCompleteArray([]);
+		}
+	};
+
+    useEffect(() => {
+		gettingCompleteArray();
+	}, []);
 
     return (
         <div
@@ -29,7 +55,7 @@ export const CourseBox = (props) => {
                 </div>
                 <div style={{display: 'flex', flexDirection: 'row',}}>
                     <div style={{display: 'flex', width: 100, height: 100, borderRadius: 32, justifyContent: 'flex-start', alignItems: 'center', marginLeft: 0}}> 
-                        <text style={{fontWeight: '900', fontSize: 20}}>30%</text>
+                        <text style={{fontWeight: '900', fontSize: 20}}>{completePercentage*100}%</text>
                     </div>
                     <div style={{display: 'flex', width: 100, height: 100, borderRadius: 32, backgroundColor: '', justifyContent: 'center', alignItems: 'center', marginLeft: 30}}>
                         d

@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const SubBlock = (props) => {
 	const courseObj = props.course;
-	const checkedArray = props.completeArray;
+	const completeArray = props.completeArray;
 	const sub = props.num;
 	const key = props.keyNum;
 
@@ -37,7 +37,7 @@ const SubBlock = (props) => {
 				<div>
 					{Object.keys(courseObj[key].subs[sub]["spec"]).map((specs, index) => {
 						const isThere =
-							checkedArray !== undefined ? checkedArray.includes(specs) : false;
+						completeArray !== undefined ? completeArray.includes(specs) : false;
 						return (
 							<div>
 								<StudentTracker
@@ -45,6 +45,8 @@ const SubBlock = (props) => {
 									specification={courseObj[key].subs[sub].spec[specs]}
 									checked={isThere}
 									course={courseObj}
+									completeArray={props.completeArray}
+									setCompleteArray={props.setCompleteArray}
 								/>
 							</div>
 						);

@@ -4,20 +4,28 @@ import { GCSEMathsAQA } from "../specifications/GCSEMathsAQA";
 import StudentTracker from "../pages/studentTracker";
 import SubBlock from "./subSpecBlock";
 import { useNavigate, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 import KeyboardArrowLeftRoundedIcon from '@mui/icons-material/KeyboardArrowLeftRounded';
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 import NavigateBeforeRoundedIcon from '@mui/icons-material/NavigateBeforeRounded';
+import { findSpecAmountByTopic } from "../functions/courseFuncs";
 
 const SpecBlock = (props) => {
+	const [perc, setPerc] = useState(props.perc);
 	const courseObj = props.course;
 	const completeArray = props.completeArray;
 	const key = props.num;
 	const isSelected = props.isSelected;
-
 	const [isOpen, setIsOpen] = useState(false);
-	const perc = Math.random() * 1;
+
+	// useEffect(() => {
+	// 	if (completeArray) {
+	// 		const topicCompleteArray = completeArray.filter(num => num.substring(0, num.indexOf(".")) === key);
+	// 		setPerc(topicCompleteArray.length / findSpecAmountByTopic(courseObj, courseObj[key].topic))
+	// 	}
+       
+	// }, [props.completeArray])
 
 	return (
 		<>
@@ -40,7 +48,7 @@ const SpecBlock = (props) => {
 						<div
 							style={{
 								display: "flex",
-								width: 1300 * perc,
+								width: Math.floor(1300 * props.perc),
 								height: 10,
 								backgroundColor: "#D6DFFF",
 								marginBottom: 0,
@@ -105,7 +113,7 @@ const SpecBlock = (props) => {
 										zIndex: 2,
 										position: "relative",
 									}}>
-									{Math.floor(perc * 100)}%
+									{Math.floor(props.perc * 100)}%
 								</text>
 								<div
 									style={{
@@ -144,33 +152,12 @@ const SpecBlock = (props) => {
 											num={sub}
 											keyNum={key}
 											completeArray={completeArray}
+											setCompleteArray={props.setCompleteArray}
 										/>
 									</div>
 								);
 							})}
 						</div>
-						// <div>
-						// 	{Object.keys(courseObj[key].subs[`${key}.1`]["spec"]).map(
-						// 		(specs, index) => {
-						// 			const isThere =
-						// 				completeArray !== undefined
-						// 					? completeArray.includes(specs)
-						// 					: false;
-						// 			return (
-						// 				<div>
-						// 					<StudentTracker
-						// 						specNumber={specs}
-						// 						specification={
-						// 							courseObj[key].subs[`${key}.1`].spec[specs]
-						// 						}
-						// 						checked={isThere}
-						// 						course={courseObj}
-						// 					/>
-						// 				</div>
-						// 			);
-						// 		}
-						// 	)}
-						// </div>
 					) : (
 						<div />
 					)}

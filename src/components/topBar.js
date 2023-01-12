@@ -16,7 +16,7 @@ const TopBar = () => {
 				borderRadius: 20,
 				justifyContent: "center",
                 alignItems: 'flex-end',
-                marginTop: 30
+                marginTop: 0
 			}}>
             <div style={{display: 'flex', flexDirection: 'row'}}>
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>
