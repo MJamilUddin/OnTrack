@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import TopBarMain from "../components/topBarMain";
 
-const AboutUs = () => {
-	let height = window.innerHeight;
-	let width = window.innerWidth;
+const AboutUs = (props) => {
+	let height = props.height;
+	let width = props.width;
 
 	const WhiteBox = (props) => {
 		return (
@@ -43,15 +43,15 @@ const AboutUs = () => {
 				display: "flex",
 				flexDirection: "column",
 				backgroundColor: "#F8F6FF",
-				height: "150%",
-				minHeight: "100vh",
+				height: 2200,
+				// minHeight: "100vh",
 				width: width,
 				minWidth: "100vh",
 				alignItems: "center",
 				marginTop: -10,
 			}}>
 
-			<TopBarMain />
+			<TopBarMain width={width} height={height} />
 
 			<div
 				style={{
@@ -116,7 +116,7 @@ const AboutUs = () => {
 				style={{
 					display: "flex",
 					width: 980,
-					height: 450,
+					height: 300,
 					marginTop: 100,
 					marginLeft: -40,
 					alignItems: "center",
@@ -151,7 +151,8 @@ const AboutUs = () => {
 				style={{
 					display: "flex",
 					flexDirection: "row",
-					marginTop: -100,
+					marginTop: 10,
+					marginBottom: 50
 				}}>
 				<img src="/images/aboutUs.png" style={{ height: 400, width: 450 }} />
 				<div

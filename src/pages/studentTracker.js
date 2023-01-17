@@ -35,7 +35,7 @@ const StudentTracker = (props) => {
 			style={{
 				display: "flex",
 				margin: 20,
-				width: 1280,
+				width: "96%",
 				height: "auto",
 				borderRadius: 10,
 				flexDirection: "row",

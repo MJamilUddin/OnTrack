@@ -6,9 +6,9 @@ import TopBarMain from "../components/topBarMain";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 
-const FAQ = () => {
-	let height = window.innerHeight;
-	let width = window.innerWidth;
+const FAQ = (props) => {
+	let height = props.height;
+	let width = props.width;
 
 	const textObj = {
 		question1: "What is the specification for this educational platform?",
@@ -74,6 +74,7 @@ const FAQ = () => {
 							justifyContent: "flex-start",
 							paddingLeft: 40,
 							paddingRight: 40,
+							paddingBottom: 10,
 							backgroundColor: "white",
 						}}>
 						<text
@@ -98,14 +99,15 @@ const FAQ = () => {
 				display: "flex",
 				flexDirection: "column",
 				backgroundColor: "#F8F6FF",
-				height: "130%",
-				minHeight: "100vh",
+				height: 2000,
+				//minHeight: "100vh",
 				width: width,
 				minWidth: "100vh",
 				alignItems: "center",
 				marginTop: -10,
 			}}>
-			<TopBarMain />
+
+			<TopBarMain width={width} height={height} />
 
 			<div
 				style={{
@@ -113,6 +115,7 @@ const FAQ = () => {
 					width: 1200,
 					height: "auto",
 					marginTop: 50,
+					marginBottom: 150,
 					marginLeft: -40,
 					alignItems: "center",
 					flexDirection: "column",
@@ -152,7 +155,7 @@ const FAQ = () => {
 					Have any questions? We’re here to help.
 				</text>
 
-				<div style={{ marginTop: 80 }} />
+				<div style={{ marginTop: 40 }} />
 
 				<FaqBlock question={textObj.question1} answer={textObj.answer1} />
 				<FaqBlock question={textObj.question2} answer={textObj.answer2} />

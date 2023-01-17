@@ -2,10 +2,12 @@
 
 import React from "react";
 
-let height = window.innerHeight;
-let width = window.innerWidth;
 
-const TopBar = () => {
+
+const TopBar = (props) => {
+
+    let width = props.width;
+
 	return (
 		<div
 			style={{
@@ -16,7 +18,7 @@ const TopBar = () => {
 				borderRadius: 20,
 				justifyContent: "center",
                 alignItems: 'flex-end',
-                marginTop: 0
+                marginTop: 20
 			}}>
             <div style={{display: 'flex', flexDirection: 'row'}}>
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>

@@ -3,12 +3,15 @@
 import { GCSEMathsAQA } from "../specifications/GCSEMathsAQA";
 import StudentTracker from "../pages/studentTracker";
 import SubBlock from "./subSpecBlock";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
-import KeyboardArrowLeftRoundedIcon from '@mui/icons-material/KeyboardArrowLeftRounded';
-import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
-import NavigateBeforeRoundedIcon from '@mui/icons-material/NavigateBeforeRounded';
+import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
+import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import ArticleIcon from "@mui/icons-material/Article";
+import NavigateBeforeRoundedIcon from "@mui/icons-material/NavigateBeforeRounded";
 import { findSpecAmountByTopic } from "../functions/courseFuncs";
 
 const SpecBlock = (props) => {
@@ -24,7 +27,7 @@ const SpecBlock = (props) => {
 	// 		const topicCompleteArray = completeArray.filter(num => num.substring(0, num.indexOf(".")) === key);
 	// 		setPerc(topicCompleteArray.length / findSpecAmountByTopic(courseObj, courseObj[key].topic))
 	// 	}
-       
+
 	// }, [props.completeArray])
 
 	return (
@@ -36,9 +39,8 @@ const SpecBlock = (props) => {
 							display: "flex",
 							flexDirection: "column",
 							height: 100,
-							width: 1300,
+							width: "100%",
 							borderRadius: 10,
-							marginBottom: 0,
 							backgroundColor: isOpen ? "white" : "white",
 							alignItems: "center",
 							justifyContent: "space-between",
@@ -77,18 +79,6 @@ const SpecBlock = (props) => {
 									props.setHighlight(props.num);
 								}
 							}}>
-							{/* <div
-					style={{
-						display: "flex",
-						width: `${perc * 100}%`,
-						height: "100%",
-						backgroundColor: "#D6DFFF",
-						zIndex: 1,
-						borderRadius: 10,
-						alignItems: "center",
-						justifyContent: "space-between",
-						position: 'relative'
-					}}/> */}
 							<text
 								style={{
 									color: "black",
@@ -118,6 +108,20 @@ const SpecBlock = (props) => {
 								<div
 									style={{
 										display: "flex",
+										borderRadius: 24,
+										marginRight: 30,
+										justifyContent: "center",
+										alignItems: "center",
+									}}>
+									<Link
+										to={{ pathname: "/https://www.physicsandmathstutor.com/maths-revision/" }}
+										target="_blank">
+										<ArticleIcon fontSize="large" style={{color: 'black'}} />
+									</Link>
+								</div>
+								<div
+									style={{
+										display: "flex",
 										height: 35,
 										width: 35,
 										borderRadius: 24,
@@ -126,13 +130,13 @@ const SpecBlock = (props) => {
 										justifyContent: "center",
 										alignItems: "center",
 									}}>
-									{props.isSelected? (
-										<KeyboardArrowRightRoundedIcon
+									{props.isSelected ? (
+										<ExpandMoreIcon
 											style={{ color: "white" }}
 											fontSize="medium"
 										/>
 									) : (
-										<KeyboardArrowDownRoundedIcon
+										<ExpandLessIcon
 											style={{ color: "white" }}
 											fontSize="medium"
 										/>
@@ -153,6 +157,8 @@ const SpecBlock = (props) => {
 											keyNum={key}
 											completeArray={completeArray}
 											setCompleteArray={props.setCompleteArray}
+											completedMode={props.completedMode}
+											showFlag={props.showFlag}
 										/>
 									</div>
 								);

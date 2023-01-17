@@ -7,9 +7,9 @@ import {
 	logInWithEmailAndPassword,
 } from "../services/firebase";
 
-const Login = () => {
-	let height = window.innerHeight;
-	let width = window.innerWidth;
+const Login = (props) => {
+	let height = props.height;
+	let width = props.width;
 
 	let navigate = useNavigate();
 	const [email, setEmail] = useState("");

@@ -4,11 +4,11 @@ import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import TopBarMain from "../components/topBarMain";
 
-const Main = () => {
+const Main = (props) => {
 	const navigate = useNavigate();
 
-	let height = window.innerHeight;
-	let width = window.innerWidth;
+	let height = props.height;
+	let width = props.width;
 
 	const Button = (props) => {
 		const [hover, setHover] = useState(false);
@@ -39,33 +39,31 @@ const Main = () => {
 			style={{
 				display: "flex",
 				flexDirection: "column",
+				height: 2200,
 				backgroundColor: "#F8F6FF",
-				height: "200%",
-				minHeight: "100vh",
+				//minHeight: "100vh",
 				width: width,
 				minWidth: "100vh",
 				alignItems: "center",
-				marginTop: -10
 			}}>
-			 <TopBarMain />
-
+			<TopBarMain width={width} height={height} />
 			<div
 				style={{
 					display: "flex",
 					flexDirection: "row",
-					marginTop: 150,
+					marginTop: 100,
 				}}>
 				<div
 					style={{
-						width: 750,
+						width: 650,
 						height: 450,
 						marginRight: 20,
 					}}>
-					<div style={{ marginTop: 80 }} />
+					<div style={{ marginTop: 50 }} />
 					<text
 						style={{
 							fontFamily: "inherit",
-							fontSize: 65,
+							fontSize: 57,
 							fontWeight: "900",
 							lineHeight: 1.1,
 							color: "#242220",
@@ -79,7 +77,7 @@ const Main = () => {
 							marginTop: 20,
 							color: "#8F8F8F",
 							fontFamily: "inherit",
-							fontSize: 25,
+							fontSize: 23,
 							fontWeight: "900",
 						}}>
 						We provide you with correct information from the specification, so
@@ -101,13 +99,13 @@ const Main = () => {
 				style={{
 					display: "flex",
 					flexDirection: "row",
-					marginTop: 200,
+					marginTop: 100,
 					marginLeft: 50,
 				}}>
 				<img src="/images/main2.png" />
 				<div
 					style={{
-						width: 700,
+						width: 600,
 						height: 450,
 						marginLeft: 40,
 					}}>
@@ -122,9 +120,8 @@ const Main = () => {
 						}}>
 						OnTrack is built on the belief that studying should be easy and
 						accessible for all students. Our platform offers a wide range of
-						resources and materials for various subjects and exam boards, making
-						it easy for anyone to find what they need. Our goal is to empower
-						and support all learners through education.
+						resources and materials for various subjects and exam boards,
+						empowering learners with simplicity and accesibilty.
 					</text>
 				</div>
 			</div>
@@ -137,11 +134,11 @@ const Main = () => {
 				}}>
 				<div
 					style={{
-						width: 750,
+						width: 600,
 						height: 450,
 						marginRight: 20,
 					}}>
-					<div style={{ marginTop: 180 }} />
+					<div style={{ marginTop: 180, marginRight: 30 }} />
 					<text
 						style={{
 							marginTop: 20,
@@ -152,14 +149,18 @@ const Main = () => {
 						}}>
 						We have organised our educational resources according to the exam
 						board specification to make it easy for students to find the
-						specific information they need. By searching for their subject and
-						exam board, students can quickly access relevant resources and save
-						time in their studies. This approach helps students stay focused and
-						achieve better academic outcomes.
+						specific information they need.
+						<br />
+						<br />
+						By searching for their subject and exam board, students can quickly
+						access relevant resources and save time in their studies. This
+						approach helps students stay focused and achieve better academic
+						outcomes.
 					</text>
 				</div>
 				<img src="/images/main3.png" />
 			</div>
+			<div style={{ marginTop: 180 }} />
 		</div>
 	);
 };

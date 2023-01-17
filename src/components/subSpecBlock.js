@@ -17,7 +17,7 @@ const SubBlock = (props) => {
 		<>
 			<div
 				style={{
-					width: 1280,
+					width: "96%",
 					backgroundColor: isOpen ? "#EEF1FD" : "#D9E1FF",
 					display: "flex",
 					margin: 20,
@@ -29,7 +29,7 @@ const SubBlock = (props) => {
 				}}
 				onClick={() => setIsOpen(!isOpen)}>
 				<text style={{ fontSize: 22, color: isOpen ? "black" : "black" }}>
-				{sub} {courseObj[key].subs[sub]["sub-topic"]}
+					{sub} {courseObj[key].subs[sub]["sub-topic"]}
 				</text>
 			</div>
 
@@ -37,18 +37,40 @@ const SubBlock = (props) => {
 				<div>
 					{Object.keys(courseObj[key].subs[sub]["spec"]).map((specs, index) => {
 						const isThere =
-						completeArray !== undefined ? completeArray.includes(specs) : false;
+							completeArray !== undefined
+								? completeArray.includes(specs)
+								: false;
+
 						return (
-							<div>
-								<StudentTracker
-									specNumber={specs}
-									specification={courseObj[key].subs[sub].spec[specs]}
-									checked={isThere}
-									course={courseObj}
-									completeArray={props.completeArray}
-									setCompleteArray={props.setCompleteArray}
-								/>
-							</div>
+							<>
+								{props.showFlag ? (
+									<>
+										{isThere == props.completedMode ? (
+											<div>
+												<StudentTracker
+													specNumber={specs}
+													specification={courseObj[key].subs[sub].spec[specs]}
+													checked={isThere}
+													course={courseObj}
+													completeArray={props.completeArray}
+													setCompleteArray={props.setCompleteArray}
+												/>
+											</div>
+										) : null}
+									</>
+								) : (
+									<div>
+										<StudentTracker
+											specNumber={specs}
+											specification={courseObj[key].subs[sub].spec[specs]}
+											checked={isThere}
+											course={courseObj}
+											completeArray={props.completeArray}
+											setCompleteArray={props.setCompleteArray}
+										/>
+									</div>
+								)}
+							</>
 						);
 					})}
 				</div>

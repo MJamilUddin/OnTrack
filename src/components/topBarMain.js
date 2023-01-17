@@ -3,10 +3,7 @@
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 
-let height = window.innerHeight;
-let width = window.innerWidth;
-
-const TopBarMain = () => {
+const TopBarMain = (props) => {
 	const navigate = useNavigate();
 
 	const Button = (props) => {
@@ -61,11 +58,10 @@ const TopBarMain = () => {
 			style={{
 				display: "flex",
 				flexDirection: "row",
-				width: width - 600,
-				height: 150,
-				flex: 1 / 12,
+				width: props.width,
 				marginTop: 50,
-				justifyContent: "space-between",
+				marginBottom: 50,
+				justifyContent: "space-around",
 			}}>
 			<img src="/images/logo.png" style={{ width: 222, height: 33 }} />
 

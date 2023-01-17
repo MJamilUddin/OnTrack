@@ -11,7 +11,7 @@ import {
 	findSpecAmountByTopic,
 } from "../functions/courseFuncs";
 
-const SpecView = () => {
+const SpecView = (props) => {
 	const { state } = useLocation();
 	const userData = useContext(UserContext);
 	const courseObj = specPicker(state.name);
@@ -21,6 +21,8 @@ const SpecView = () => {
 	const [highlight, setHighlight] = useState(-1);
 
 	const [sortedMode, setSortedMode] = useState(false);
+	const [completedMode, setCompletedMode] = useState(false);
+	const [showFlag, setShowFlag] = useState(false);
 
 	const gettingCompleteArray = async () => {
 		const data = await getCompleteArray(userData.uid, state.name);
@@ -73,33 +75,59 @@ const SpecView = () => {
 		}
 	};
 
-	// useEffect(() => {
-	// 	orderedListFormulator();
-	// }, [completeArray]);
+	const CheckButton = (props) => {
+		return (
+			<div style={{display:'flex', flexDirection: 'row', marginLeft: 20}}>
+			<button 
+			onClick={() => {
+				props.onFunc()
+			}}
+			style={{
+				height: 20,
+				width: 20,
+				borderRadius: 20,
+				backgroundColor: props.bool? 'blue' : 'grey' 
+			}} />
+			<text style={{marginLeft: 10}}>{props.name}</text>
+			</div>
+		)
+	}
 
 	return (
-		<div style={{ display: "flex", flexDirection: "column", marginLeft: 100 }}>
+		<div style={{ display: "flex", flexDirection: "column", marginLeft: 100, width: props.width }}>
 			<div style={{ display: "flex", flexDirection: "row", marginLeft: 10 }}>
 				<h2>{courseObj[1].name}</h2>
-				<button
-					onClick={() => {
-						orderedListFormulator();
-						setSortedMode(!sortedMode);
-					}}>
-					+
-				</button>
-				<button
-					onClick={() => {
-						console.log("gg");
-					}}>
-					()
-				</button>
-				<h2>{Math.floor(completePercentage * 100)}%</h2>
+				<div style={{marginTop: 30, display: "flex", flexDirection: "row",}}>
+				<CheckButton 
+				 name={"Sort"}
+				 bool={sortedMode}
+				 onFunc={() => {
+					orderedListFormulator();
+					setSortedMode(!sortedMode);
+				 }}
+				/>
+				<CheckButton 
+				 name={"Show"}
+				 bool={showFlag}
+				 onFunc={() => {
+					setShowFlag(!showFlag);
+				 }}
+				/>
+				<CheckButton 
+				 name={completedMode? "Completed" : "Not Completed"}
+				 bool={completedMode}
+				 onFunc={() => {
+					setCompletedMode(!completedMode);
+				 }}
+				/>
+				</div>
+
+				<h2 style={{marginLeft: 20}}>{Math.floor(completePercentage * 100)}%</h2>
 			</div>
 
 			<div
 				style={{
-					width: 1320,
+					width: "70%",
 					height: 800,
 					paddingBottom: 20,
 					overflow: "scroll",
@@ -117,6 +145,8 @@ const SpecView = () => {
 									setCompleteArray={setCompleteArray}
 									isSelected={shouldBeShown(key)}
 									setHighlight={setHighlight}
+									completedMode={completedMode}
+									showFlag={showFlag}
 								/>
 							);
 					  })
@@ -130,6 +160,8 @@ const SpecView = () => {
 									setCompleteArray={setCompleteArray}
 									isSelected={shouldBeShown(key)}
 									setHighlight={setHighlight}
+									completedMode={completedMode}
+									showFlag={showFlag}
 								/>
 							);
 					  })}

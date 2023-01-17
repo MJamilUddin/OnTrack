@@ -8,8 +8,7 @@ import { useNavigate } from "react-router-dom";
 import SpecView from "../components/specView";
 import HomePage from "./homePage";
 
-
-const Origin = () => {
+const Origin = (props) => {
 	const [user, loading, error] = useAuthState(auth);
 	const navigate = useNavigate();
 	const [userData, setUserData] = useState(null);
@@ -26,25 +25,14 @@ const Origin = () => {
 
 	useEffect(() => {
 		if (loading) return;
-		if (!user) return navigate("/login");
+		if (!user) {
+			return navigate("/login");
+		}  else {
+			return navigate("/home");
+		}
 		//  fetchUser();
 	}, [user, navigate]);
 
-	return (
-		<>
-		<div
-			style={{
-				margin: 50,
-				borderWidth: 2,
-				display: "flex",
-				flexDirection: "row",
-			}}>
-            <HomePage />
-			
-		</div>
-
-		</>
-	);
 };
 
 export default Origin;

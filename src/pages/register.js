@@ -4,9 +4,9 @@ import { useState } from "react";
 import { Router, useNavigate } from "react-router-dom";
 import { registerWithEmailAndPassword, logInWithEmailAndPassword } from "../services/firebase";
 
-const Register = () => {
-	let height = window.innerHeight;
-	let width = window.innerWidth;
+const Register = (props) => {
+	let height = props.height;
+	let width = props.width;
 	
 	let navigate = useNavigate();
     const [email, setEmail] = useState("");
