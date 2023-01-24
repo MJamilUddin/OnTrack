@@ -34,46 +34,71 @@ function App() {
 	const [width, setWindowWidth] = useState(0);
 	const [height, setWindowHeight] = useState(0);
 
-	useEffect(() => { 
-
-		updateDimensions();
-
-		window.addEventListener('resize', updateDimensions);
-		return () => 
-		window.removeEventListener('resize',updateDimensions);
-		}, []);
-
-		const updateDimensions = () => {
+	const updateDimensions = () => {
 		const width = window.innerWidth;
 		const height = window.innerHeight;
 		setWindowWidth(width);
 		setWindowHeight(height);
-		}
-	
+	};
 
-	const [userData, setUserData] = useState(null)
+	useEffect(() => {
+		updateDimensions();
+
+		window.addEventListener("resize", updateDimensions);
+		return () => window.removeEventListener("resize", updateDimensions);
+	}, []);
+
+	const [userData, setUserData] = useState(null);
 
 	const getUserData = async () => {
-		const data = await getDocument('users', user.uid);
-		setUserData(data)
+		const data = await getDocument("users", user.uid);
+		setUserData(data);
 	};
 
 	useEffect(() => {
 		getUserData();
-	}, [user])
+	}, [user]);
 
 	return (
-		<div style={{display: "flex", width: width, height: height, backgroundColor: "#F8F6FF", fontFamily: "Poppins" }}>
+		<div
+			style={{
+				display: "flex",
+				width: width,
+				height: height,
+				backgroundColor: "#F8F6FF",
+				fontFamily: "Poppins",
+			}}>
 			<Router>
 				{!user ? (
-					<div style={{display: 'flex', flexDirection: 'column', width: width, height: height}}>
-					<Routes>
-						<Route path="/" element={<Main width={width} height={height} />} />
-						<Route path="/login" element={<Login width={width} height={height} />} />
-						<Route path="/register" element={<Register width={width} height={height} />} />
-						<Route path="/aboutUs" element={<AboutUs  width={width} height={height} />} />
-						<Route path="/faq" element={<FAQ  width={width} height={height} />} />
-					</Routes>
+					<div
+						style={{
+							display: "flex",
+							flexDirection: "column",
+							width: width,
+							height: height,
+						}}>
+						<Routes>
+							<Route
+								path="/"
+								element={<Main width={width} height={height} />}
+							/>
+							<Route
+								path="/login"
+								element={<Login width={width} height={height} />}
+							/>
+							<Route
+								path="/register"
+								element={<Register width={width} height={height} />}
+							/>
+							<Route
+								path="/aboutUs"
+								element={<AboutUs width={width} height={height} />}
+							/>
+							<Route
+								path="/faq"
+								element={<FAQ width={width} height={height} />}
+							/>
+						</Routes>
 					</div>
 				) : (
 					<div
@@ -82,31 +107,34 @@ function App() {
 							borderWidth: 2,
 							display: "flex",
 							flexDirection: "row",
-							width: width, 
-							height: height
+							width: width,
+							height: height,
 						}}>
-						{userData !== null?
+						{userData !== null ? (
 							<UserContext.Provider value={userData}>
-							<MiniDrawer />
-							<div style={{display: "flex", flexDirection: 'column'}}>
-							<TopBar width={width} height={height} />
-							<Routes>
-								<Route path="/" element={<Origin  />} />
-								<Route path="/login" element={<Redirect />} />
-								<Route path="/register" element={<Redirect />} />
-								<Route path="/home" element={<HomePage width={width} height={height} />} />
-								<Route path="/spec" element={<SpecView width={width} height={height} />} />
-								<Route path="/courses" element={<Courses />} />
-								<Route path="/selection" element={<SpecSelection />} />
-							</Routes>
-
-							</div>
-							
-						</UserContext.Provider>
-						:
+								<MiniDrawer />
+								<div style={{ display: "flex", flexDirection: "column" }}>
+									<TopBar width={width} height={height} />
+									<Routes>
+										<Route path="/" element={<Origin />} />
+										<Route path="/login" element={<Redirect />} />
+										<Route path="/register" element={<Redirect />} />
+										<Route
+											path="/home"
+											element={<HomePage width={width} height={height} />}
+										/>
+										<Route
+											path="/spec"
+											element={<SpecView width={width} height={height} />}
+										/>
+										<Route path="/courses" element={<Courses width={width} height={height} />} />
+										<Route path="/selection" element={<SpecSelection width={width} height={height} />} />
+									</Routes>
+								</div>
+							</UserContext.Provider>
+						) : (
 							<div>Loading</div>
-						}
-						
+						)}
 					</div>
 				)}
 			</Router>

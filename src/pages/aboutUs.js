@@ -19,7 +19,7 @@ const AboutUs = (props) => {
 					backgroundColor: "white",
 					color: "#23398C",
 					border: "none",
-					fontSize: 17,
+					fontSize: 15,
 					marginRight: 30,
 					marginTop: 10,
 					padding: 20,
@@ -59,6 +59,8 @@ const AboutUs = (props) => {
 					flexDirection: "row",
 					marginTop: 80,
 					marginLeft: 0,
+					justifyContent: "center",
+					width: '80%'
 				}}>
 				<div
 					style={{
@@ -115,7 +117,8 @@ const AboutUs = (props) => {
 			<div
 				style={{
 					display: "flex",
-					width: 980,
+					justifyContent: "center",
+					width: '70%',
 					height: 300,
 					marginTop: 100,
 					marginLeft: -40,

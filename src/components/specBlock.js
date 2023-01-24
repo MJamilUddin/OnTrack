@@ -36,21 +36,21 @@ const SpecBlock = (props) => {
 				<>
 					<div
 						style={{
-							display: "flex",
+							display: "inline-block",
 							flexDirection: "column",
 							height: 100,
-							width: "100%",
+							width: "97%",
 							borderRadius: 10,
 							backgroundColor: isOpen ? "white" : "white",
 							alignItems: "center",
-							justifyContent: "space-between",
+							justifyContent: "space-evenly",
 							marginBottom: 25,
 							zIndex: 0,
 						}}>
 						<div
 							style={{
 								display: "flex",
-								width: Math.floor(1300 * props.perc),
+								width: Math.floor(props.width/2 * props.perc),
 								height: 10,
 								backgroundColor: "#D6DFFF",
 								marginBottom: 0,
@@ -63,7 +63,7 @@ const SpecBlock = (props) => {
 							style={{
 								display: "flex",
 								height: 85,
-								width: 1300,
+								width: 'auto',
 								borderRadius: 10,
 								marginBottom: 0,
 								backgroundColor: isOpen ? "white" : "white",
@@ -79,6 +79,7 @@ const SpecBlock = (props) => {
 									props.setHighlight(props.num);
 								}
 							}}>
+							<div style={{display: "flex", flex: 12}}>
 							<text
 								style={{
 									color: "black",
@@ -87,12 +88,11 @@ const SpecBlock = (props) => {
 									fontFamily: "sans-serif",
 									marginLeft: 40,
 									zIndex: 2,
-									position: "relative",
 								}}>
 								{courseObj[key].topic}
 							</text>
-
-							<div style={{ display: "flex", flexDirection: "row" }}>
+							</div>
+							<div style={{ display: "flex", flexDirection: "row", flex: 1 }}>
 								<text
 									style={{
 										color: "black",
@@ -101,11 +101,11 @@ const SpecBlock = (props) => {
 										fontFamily: "sans-serif",
 										marginRight: 20,
 										zIndex: 2,
-										position: "relative",
 									}}>
 									{Math.floor(props.perc * 100)}%
 								</text>
 								<div
+								onClick={() => window.location.replace('https://www.physicsandmathstutor.com/maths-revision/')}
 									style={{
 										display: "flex",
 										borderRadius: 24,
@@ -113,11 +113,8 @@ const SpecBlock = (props) => {
 										justifyContent: "center",
 										alignItems: "center",
 									}}>
-									<Link
-										to={{ pathname: "/https://www.physicsandmathstutor.com/maths-revision/" }}
-										target="_blank">
 										<ArticleIcon fontSize="large" style={{color: 'black'}} />
-									</Link>
+									
 								</div>
 								<div
 									style={{
@@ -147,7 +144,7 @@ const SpecBlock = (props) => {
 					</div>
 
 					{isOpen === true ? (
-						<div>
+						<div style={{marginRight: 30, marginBottom: 50}}>
 							{Object.keys(courseObj[key].subs).map((sub, index) => {
 								return (
 									<div>

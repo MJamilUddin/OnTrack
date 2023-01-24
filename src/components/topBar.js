@@ -1,12 +1,16 @@
 /** @format */
 
-import React from "react";
+import React, { useState, useContext } from "react";
+import { UserContext } from "../App";
 
 
 
 const TopBar = (props) => {
-
+    const userData = useContext(UserContext);
     let width = props.width;
+    const firstName = userData.firstName || "Katie";
+    const surName = userData.surName || "Hopkins";
+    const school = userData.school || "SlimeBucket";
 
 	return (
 		<div
@@ -14,11 +18,12 @@ const TopBar = (props) => {
 				display: "flex",
 				flexDirection: "column",
 				height: 150,
-				width: width - width/6,
+				width: 'auto',
 				borderRadius: 20,
 				justifyContent: "center",
                 alignItems: 'flex-end',
-                marginTop: 20
+                marginTop: 15,
+                marginRight: 40
 			}}>
             <div style={{display: 'flex', flexDirection: 'row'}}>
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>
@@ -26,10 +31,10 @@ const TopBar = (props) => {
                     STUDENT
                 </text>
                 <text style={{fontFamily: 'inter', fontSize: 14, color: 'black' }}>
-                    Asma Khatol
+                    {firstName + " " + surName}
                 </text>
                 <text style={{fontFamily: 'inter', fontSize: 12, color: '#ACACAC' }}>
-                    King Solomon Academy
+                    {school}
                 </text>
             </div>
             <img src="/images/defaultProfile.png" style={{marginLeft: 10, width: 50, height: 50 }} />

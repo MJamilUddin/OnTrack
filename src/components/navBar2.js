@@ -153,7 +153,7 @@ export default function MiniDrawer() {
 
 				<List>
 					{open ? (
-						<button
+						<div
 						onClick={() => navigate("/home")}
 							style={{
 								display: "flex",
@@ -174,7 +174,7 @@ export default function MiniDrawer() {
 							{/* <ExpandLessRoundedIcon
 								style={{ color: "white", marginLeft: 10 }}
 							/> */}
-						</button>
+						</div>
 					) : (
 						<div
 							style={{

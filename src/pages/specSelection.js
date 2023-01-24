@@ -16,7 +16,7 @@ const data = {
 	],
 };
 
-function SpecSelection() {
+function SpecSelection(props) {
 	const userData = useContext(UserContext);
 	const { state } = useLocation();
 	const { name } = state;
@@ -30,13 +30,15 @@ function SpecSelection() {
 					flexDirection: "column",
 					marginTop: 0,
 					marginLeft: 50,
+					width: 'auto',
+					height: props.height
 				}}>
 				<h2 style={{marginLeft: 30}}>Specifications</h2>	
 				{mapArray.map((course) => {
 					return (
 						<div
 							style={{
-								width: 1280,
+								width: props.width < 300? props.width : props.width - 350,
 								backgroundColor: "white",
 								display: "flex",
 								margin: 10,
@@ -47,22 +49,25 @@ function SpecSelection() {
 								alignItems: 'center',
 								justifyContent: "space-between",
 							}}>
-							<text style={{ fontSize: 22, color: "black", fontFamily: 'inter'  }}>
+							<text style={{ fontSize: 20, color: "black", fontFamily: 'inter', fontWeight: '500'  }}>
 								{course.name}
 							</text>
-							<button
+							<div
 								style={{
+									display: 'flex',
 									width: 90,
 									height: 40,
 									borderRadius: 10,
 									backgroundColor: "#FABB18",
 									marginRight: 20,
+									justifyContent: 'center',
+									alignItems: 'center'
 								}}
 								onClick={() => {
 									addSubCollection(userData.uid, course.code);
 								}}>
-								<text style={{ fontWeight: 900, fontSize: 16 }}>Add</text>
-							</button>
+								<text style={{ fontWeight: 900, fontSize: 16, color: 'black' }}>Add</text>
+							</div>
 						</div>
 					);
 				})}

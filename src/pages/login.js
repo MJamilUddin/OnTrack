@@ -42,16 +42,27 @@ const Login = (props) => {
 				}}>
 				<div
 					style={{
-						boxShadow: "0.5px 0.5px 14px grey",
+						display: "flex",
+						flexDirection: "column",
+						boxShadow: "0.5px 0.5px 14px #DEDEDE",
 						margin: "4em",
 						padding: "1em",
-						width: 550,
-						height: 700,
+						maxWidth: 600,
+						minWidth: 300,
+						width: "60%",
+						minHeight: 400,
+						height: "70%",
 						borderRadius: 20,
 						padding: 60,
 						justifyContent: "center",
+						alignContent: "center",
 					}}>
-					<img src="/images/logo.png" style={{ marginTop: 40 }} />
+					<div
+						style={{
+							display: "flex",
+						}}>
+						<img src="/images/logo.png" />
+					</div>
 
 					<div style={{ marginTop: 50 }}>
 						<text
@@ -62,7 +73,7 @@ const Login = (props) => {
 								fontSize: 21,
 								fontWeight: "900",
 							}}>
-							Welcome back, Asma!
+							Welcome back !
 						</text>
 					</div>
 
@@ -79,7 +90,7 @@ const Login = (props) => {
 								placeholder=""
 								style={{
 									marginTop: 10,
-									width: 520,
+									width: '95%',
 									height: 50,
 									borderRadius: 10,
 									backgroundColor: "#F2F2F2",
@@ -102,7 +113,7 @@ const Login = (props) => {
 								placeholder=""
 								style={{
 									marginTop: 10,
-									width: 520,
+									width: '95%',
 									height: 50,
 									borderRadius: 10,
 									backgroundColor: "#F2F2F2",
@@ -124,7 +135,7 @@ const Login = (props) => {
 								type="submit"
 								style={{
 									height: 51,
-									width: 540,
+									width: '95%',
 									borderRadius: 30,
 									padding: 16,
 									marginTop: 50,
@@ -136,18 +147,18 @@ const Login = (props) => {
 								Login
 							</button>
 
-							<div style={{display: 'flex', justifyContent: 'center'}}>
-								<text style={{color: '#C0C0C0'}}>
+							<div style={{ display: "flex", justifyContent: "center" }}>
+								<text style={{ color: "#C0C0C0" }}>
 									Don’t have an account?
 									<button
-										onClick={() => navigate('/register')}
+										onClick={() => navigate("/register")}
 										style={{
 											backgroundColor: "white",
 											border: "none",
 											marginTop: 20,
 											fontFamily: "inherit",
 											fontSize: 16,
-											color: '#7E6FEE'
+											color: "#7E6FEE",
 										}}>
 										Sign up
 									</button>
@@ -160,13 +171,15 @@ const Login = (props) => {
 
 			<div
 				style={{
+					width: '70%',
+					height: '80%',
 					display: "flex",
 					flex: 4,
 					backgroundColor: "#F8F6FF",
 					justifyContent: "center",
 					alignItems: "center",
 				}}>
-				<img src="/images/login1.png" />
+				<img src="/images/login1.png" style={{width: '70%', height: '70%'}}/>
 			</div>
 		</div>
 	);

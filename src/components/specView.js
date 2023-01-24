@@ -94,7 +94,7 @@ const SpecView = (props) => {
 	}
 
 	return (
-		<div style={{ display: "flex", flexDirection: "column", marginLeft: 100, width: props.width }}>
+		<div style={{ display: "flex", flexDirection: "column", marginLeft: 50, width: props.width - 300, height: props.height - 80}}>
 			<div style={{ display: "flex", flexDirection: "row", marginLeft: 10 }}>
 				<h2>{courseObj[1].name}</h2>
 				<div style={{marginTop: 30, display: "flex", flexDirection: "row",}}>
@@ -127,11 +127,11 @@ const SpecView = (props) => {
 
 			<div
 				style={{
-					width: "70%",
-					height: 800,
+					width: props.width - 350,
+					height: 'auto',
 					paddingBottom: 20,
 					overflow: "scroll",
-					marginBottom: 10,
+					marginBottom: 0,
 					marginTop: 30,
 				}}>
 				{sortedMode === false
@@ -140,6 +140,7 @@ const SpecView = (props) => {
 								<SpecBlock
 									perc={topicPercentageFinder(key)/100}
 									course={courseObj}
+									width={props.width}
 									num={key}
 									completeArray={completeArray}
 									setCompleteArray={setCompleteArray}
@@ -155,6 +156,7 @@ const SpecView = (props) => {
 								<SpecBlock
 									perc={topicPercentageFinder(key)/100}
 									course={courseObj}
+									width={props.width}
 									num={key}
 									completeArray={completeArray}
 									setCompleteArray={setCompleteArray}

@@ -43,8 +43,9 @@ const Main = (props) => {
 				backgroundColor: "#F8F6FF",
 				//minHeight: "100vh",
 				width: width,
-				minWidth: "100vh",
+				minWidth: 200,
 				alignItems: "center",
+				
 			}}>
 			<TopBarMain width={width} height={height} />
 			<div
@@ -52,6 +53,8 @@ const Main = (props) => {
 					display: "flex",
 					flexDirection: "row",
 					marginTop: 100,
+					width: '80%',
+					justifyContent: "center",
 				}}>
 				<div
 					style={{
@@ -77,7 +80,7 @@ const Main = (props) => {
 							marginTop: 20,
 							color: "#8F8F8F",
 							fontFamily: "inherit",
-							fontSize: 23,
+							fontSize: 20,
 							fontWeight: "900",
 						}}>
 						We provide you with correct information from the specification, so
@@ -99,6 +102,8 @@ const Main = (props) => {
 				style={{
 					display: "flex",
 					flexDirection: "row",
+					justifyContent: "center",
+					width: '80%',
 					marginTop: 100,
 					marginLeft: 50,
 				}}>
@@ -115,7 +120,7 @@ const Main = (props) => {
 							marginTop: 20,
 							color: "#8F8F8F",
 							fontFamily: "inherit",
-							fontSize: 17,
+							fontSize: 16,
 							fontWeight: "900",
 						}}>
 						OnTrack is built on the belief that studying should be easy and
@@ -131,6 +136,8 @@ const Main = (props) => {
 					display: "flex",
 					flexDirection: "row",
 					marginTop: 60,
+					width: '80%',
+					justifyContent: "center",
 				}}>
 				<div
 					style={{

@@ -6,8 +6,11 @@ import { UserContext } from "../App";
 import { CourseBox } from "../components/courseBox";
 import { getCoursesList } from "../services/firebase";
 import nameTransfer from "../functions/nameTransfer";
+import { width } from "@mui/system";
 
-const HomePage = () => {
+const HomePage = (props) => {
+	const width = props.width;
+	const height = props.height;
 	let navigate = useNavigate();
 	const userData = useContext(UserContext);
 	const [courseInfo, setCourseInfo] = useState(null);
@@ -23,7 +26,7 @@ const HomePage = () => {
 	}, []);
 
 	return (
-		<div style={{ marginLeft: 30 }}>
+		<div style={{ marginLeft: 30, width: 'auto', height: height }}>
 			<h2 style={{marginLeft: 50}}>My Subjects</h2>
 			{courseInfo !== null ? (
 				<div
@@ -34,12 +37,15 @@ const HomePage = () => {
 						justifyContent: "left",
 						alignContent: 'flex-start',
 						marginLeft: 30,
-						width: 1200,
-						height: 800,
+						marginRight: 45,
+						paddingBottom: 50,
+						width: 'auto',
+						height: 'auto',
 					}}>
 					{Object.keys(courseInfo).map((key, index) => {
 						const courseName = nameTransfer[key];
 						return (
+							<>
 							<CourseBox
 								name={courseName}
 								image={"/images/maths.jpg"}
@@ -47,6 +53,14 @@ const HomePage = () => {
 								navigate={"/spec"}
 								state={{ name: key }}
 							/>
+							<CourseBox
+								name={courseName}
+								image={"/images/maths.jpg"}
+								add={false}
+								navigate={"/spec"}
+								state={{ name: key }}
+							/>
+							</>
 						);
 					})}
 				</div>

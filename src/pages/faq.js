@@ -14,7 +14,7 @@ const FAQ = (props) => {
 		question1: "What is the specification for this educational platform?",
 		answer1: "The specification for this educational platform outlines the features, requirements, and design of the platform. It helps to ensure that the platform is effective, reliable, and user-friendly.",
 		question2: "What types of features can I expect to find on this educational platform?",
-		answer2: "- A course catalog with a variety of educational courses and materials.  \n - A learning management system (LMS) to track progress and access course materials. \n - Interactive tools such as quizzes, forums, and virtual classrooms",
+		answer2: "- A course catalog with a variety of educational courses and materials.  - A learning management system (LMS) to track progress and access course materials. \n - Interactive tools such as quizzes, forums, and virtual classrooms",
 		question3: "Is this educational platform available to everyone?",
 		answer3: "Access to this educational platform may be limited to certain individuals or groups, such as students, teachers, or educational institutions. However, some resources and materials may be available to the general public.",
 		question4: "How do I access this educational platform?",
@@ -48,7 +48,7 @@ const FAQ = (props) => {
 						style={{
 							color: "black",
 							fontFamily: "inter",
-							fontSize: 18,
+							fontSize: 16,
 							fontWeight: "600",
 						}}>
 						{props.question}
@@ -70,11 +70,11 @@ const FAQ = (props) => {
 						style={{
 							display: "flex",
 							width: 960,
-							height: 72,
+							height: 'auto',
 							justifyContent: "flex-start",
 							paddingLeft: 40,
 							paddingRight: 40,
-							paddingBottom: 10,
+							paddingBottom: 35,
 							backgroundColor: "white",
 						}}>
 						<text
@@ -83,7 +83,7 @@ const FAQ = (props) => {
 								fontFamily: "inter",
 								fontSize: 16,
 								fontWeight: "400",
-								marginTop: 10
+								marginTop: 20
 							}}>
 							{props.answer}
 						</text>
@@ -114,7 +114,7 @@ const FAQ = (props) => {
 					display: "flex",
 					width: 1200,
 					height: "auto",
-					marginTop: 50,
+					marginTop: 10,
 					marginBottom: 150,
 					marginLeft: -40,
 					alignItems: "center",
@@ -125,7 +125,7 @@ const FAQ = (props) => {
 						marginTop: 20,
 						color: "black",
 						fontFamily: "inter",
-						fontSize: 19,
+						fontSize: 18,
 						fontWeight: "700",
 					}}>
 					What do you want to know?
@@ -136,7 +136,7 @@ const FAQ = (props) => {
 						marginTop: 20,
 						color: "black",
 						fontFamily: "inter",
-						fontSize: 35,
+						fontSize: 25,
 						fontWeight: "600",
 						textAlign: "center",
 						width: 1000,

@@ -47,7 +47,7 @@ export const logInWithEmailAndPassword = async (email, password) => {
 	}
 };
 
-export const registerWithEmailAndPassword = async (email, password) => {
+export const registerWithEmailAndPassword = async (firstName, surName, email, school, password) => {
 	try {
 		const res = await createUserWithEmailAndPassword(auth, email, password);
 		const user = res.user;
@@ -55,6 +55,9 @@ export const registerWithEmailAndPassword = async (email, password) => {
 		await setDoc(doc(db, "users", user.uid), {
 			uid: user.uid,
 			email,
+			firstName,
+			surName,
+			school
 		});
 	} catch (err) {
 		console.error(err.mesage);
