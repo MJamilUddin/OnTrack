@@ -4,6 +4,7 @@ import SpecBlock from "./specBlock";
 import { useNavigate, useLocation } from "react-router-dom";
 import { UserContext } from "../App";
 import { specPicker } from "../functions/specPicker";
+import BasicPopover from "./popover";
 import { getCompleteArray } from "../services/firebase";
 import { useEffect, useState, useContext } from "react";
 import {
@@ -54,15 +55,15 @@ const SpecView = (props) => {
 
 	const topicPercentageFinder = (key) => {
 		if (completeArray) {
-		const topicCompleteArray = completeArray.filter(
-			(num) => num.substring(0, num.indexOf(".")) === key
-		);
-		const percentage =
-			topicCompleteArray.length /
-			findSpecAmountByTopic(courseObj, courseObj[key].topic);
-		
-		return percentage * 100;
-	}
+			const topicCompleteArray = completeArray.filter(
+				(num) => num.substring(0, num.indexOf(".")) === key
+			);
+			const percentage =
+				topicCompleteArray.length /
+				findSpecAmountByTopic(courseObj, courseObj[key].topic);
+
+			return percentage * 100;
+		}
 	};
 
 	const orderedListFormulator = () => {
@@ -77,58 +78,80 @@ const SpecView = (props) => {
 
 	const CheckButton = (props) => {
 		return (
-			<div style={{display:'flex', flexDirection: 'row', marginLeft: 20}}>
-			<button 
-			onClick={() => {
-				props.onFunc()
-			}}
-			style={{
-				height: 20,
-				width: 20,
-				borderRadius: 20,
-				backgroundColor: props.bool? 'blue' : 'grey' 
-			}} />
-			<text style={{marginLeft: 10}}>{props.name}</text>
+			<div style={{ display: "flex", flexDirection: "row", marginLeft: 20 }}>
+				<button
+					onClick={() => {
+						props.onFunc();
+					}}
+					style={{
+						height: 20,
+						width: 20,
+						borderRadius: 20,
+						backgroundColor: props.bool ? "blue" : "grey",
+					}}
+				/>
+				<text style={{ marginLeft: 10 }}>{props.name}</text>
 			</div>
-		)
-	}
+		);
+	};
 
 	return (
-		<div style={{ display: "flex", flexDirection: "column", marginLeft: 50, width: props.width - 300, height: props.height - 80}}>
+		<div
+			style={{
+				display: "flex",
+				flexDirection: "column",
+				marginLeft: 50,
+				width: props.width - 300,
+				height: props.height - 80,
+			}}>
 			<div style={{ display: "flex", flexDirection: "row", marginLeft: 10 }}>
 				<h2>{courseObj[1].name}</h2>
-				<div style={{marginTop: 30, display: "flex", flexDirection: "row",}}>
-				<CheckButton 
-				 name={"Sort"}
-				 bool={sortedMode}
-				 onFunc={() => {
-					orderedListFormulator();
-					setSortedMode(!sortedMode);
-				 }}
-				/>
-				<CheckButton 
-				 name={"Show"}
-				 bool={showFlag}
-				 onFunc={() => {
-					setShowFlag(!showFlag);
-				 }}
-				/>
-				<CheckButton 
-				 name={completedMode? "Completed" : "Not Completed"}
-				 bool={completedMode}
-				 onFunc={() => {
-					setCompletedMode(!completedMode);
-				 }}
-				/>
+				<div
+					style={{
+						marginTop: 20,
+						marginLeft: 15,
+						display: "flex",
+						flexDirection: "row",
+					}}>
+					<BasicPopover
+						content={
+							<>
+								<CheckButton
+									name={"Sort"}
+									bool={sortedMode}
+									onFunc={() => {
+										orderedListFormulator();
+										setSortedMode(!sortedMode);
+									}}
+								/>
+								<CheckButton
+									name={"Show"}
+									bool={showFlag}
+									onFunc={() => {
+										setShowFlag(!showFlag);
+									}}
+								/>
+								<CheckButton
+									name={completedMode ? "Completed" : "Not Completed"}
+									bool={completedMode}
+									onFunc={() => {
+										setCompletedMode(!completedMode);
+									}}
+								/>
+							</>
+						}
+					/>
 				</div>
 
-				<h2 style={{marginLeft: 20}}>{Math.floor(completePercentage * 100)}%</h2>
+				<h2 style={{ marginLeft: 20 }}>
+					{Math.floor(completePercentage * 100)}%
+				</h2>
 			</div>
 
 			<div
 				style={{
 					width: props.width - 350,
-					height: 'auto',
+					height: "auto",
 					paddingBottom: 20,
 					overflow: "scroll",
 					marginBottom: 0,
@@ -138,7 +161,7 @@ const SpecView = (props) => {
 					? Object.keys(courseObj).map((key, index) => {
 							return (
 								<SpecBlock
-									perc={topicPercentageFinder(key)/100}
+									perc={topicPercentageFinder(key) / 100}
 									course={courseObj}
 									width={props.width}
 									num={key}
@@ -154,7 +177,7 @@ const SpecView = (props) => {
 					: sortedArray?.map((key, index) => {
 							return (
 								<SpecBlock
-									perc={topicPercentageFinder(key)/100}
+									perc={topicPercentageFinder(key) / 100}
 									course={courseObj}
 									width={props.width}
 									num={key}

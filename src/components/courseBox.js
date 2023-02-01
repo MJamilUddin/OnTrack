@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { specPicker } from "../functions/specPicker";
+import { imgPicker } from "../functions/courseImgTransfer";
 import { getCompleteArray } from "../services/firebase";
 import { useEffect, useState, useContext } from "react";
 import { findSpecAmount } from "../functions/courseFuncs";
@@ -10,6 +11,7 @@ export const CourseBox = (props) => {
     const navigate = useNavigate();
     const userData = useContext(UserContext);
     const courseObj = specPicker(props.state.name);
+    const imgName = props.add? props.image : imgPicker(props.state.name);
 	const [completeArray, setCompleteArray] = useState();
 	const [completePercentage, setCompletePercentage] = useState(0);
 
@@ -58,7 +60,7 @@ export const CourseBox = (props) => {
                         <text style={{fontWeight: '900', fontSize: 20}}>{!props.add? `${Math.floor(completePercentage*100)}%` : ''}</text>
                     </div>
                     <div style={{display: 'flex', width: 100, height: 100, borderRadius: 32, backgroundColor: '', justifyContent: 'center', alignItems: 'center', marginLeft: 30}}>
-                        d
+                        <img src={`/images/courseImages/${imgName}`} />
                     </div>
 
                 </div>

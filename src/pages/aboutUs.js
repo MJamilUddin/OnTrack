@@ -60,11 +60,11 @@ const AboutUs = (props) => {
 					marginTop: 80,
 					marginLeft: 0,
 					justifyContent: "center",
-					width: '80%'
+					width: '85%'
 				}}>
 				<div
 					style={{
-						width: 600,
+						width: 650,
 						height: 250,
 						marginLeft: 0,
 					}}>

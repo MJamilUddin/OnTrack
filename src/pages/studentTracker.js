@@ -51,7 +51,7 @@ const StudentTracker = (props) => {
 				</div>
 				<div style={{marginLeft: 20}}>
                     
-					<text style={{ fontSize: 17, color: "black" }}>
+					<text style={{ fontSize: 17, color: "black", whiteSpace: "break-spaces" }}>
 						{props.specification}
 					</text>
 				</div>

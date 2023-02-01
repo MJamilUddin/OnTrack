@@ -65,7 +65,8 @@ const HomePage = (props) => {
 					})}
 				</div>
 			) : (
-				<div>Add some courses!</div>
+				<div style={{width: 'auto',
+				height: 'auto',}}>Add some courses!</div>
 			)}
 		</div>
 	);

@@ -18,7 +18,7 @@ const TopBar = (props) => {
 				display: "flex",
 				flexDirection: "column",
 				height: 150,
-				width: 'auto',
+				width: width - 350,
 				borderRadius: 20,
 				justifyContent: "center",
                 alignItems: 'flex-end',

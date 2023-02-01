@@ -45,20 +45,19 @@ const Main = (props) => {
 				width: width,
 				minWidth: 200,
 				alignItems: "center",
-				
 			}}>
 			<TopBarMain width={width} height={height} />
 			<div
 				style={{
 					display: "flex",
 					flexDirection: "row",
-					marginTop: 100,
-					width: '80%',
+					marginTop: 50,
+					width: "90%",
 					justifyContent: "center",
 				}}>
 				<div
 					style={{
-						width: 650,
+						width: 750,
 						height: 450,
 						marginRight: 20,
 					}}>
@@ -95,7 +94,18 @@ const Main = (props) => {
 						width={190}
 					/>
 				</div>
-				<img src="/images/main1.png" />
+				<div
+					style={{
+						display: "flex",
+						justifyContent: "center",
+						alignItems: "center",
+						marginLeft: 50
+					}}>
+					<img
+						src="/images/main1.png"
+						style={{ minWidth: 400, width: "100%", height: "80%" }}
+					/>
+				</div>
 			</div>
 
 			<div
@@ -103,14 +113,14 @@ const Main = (props) => {
 					display: "flex",
 					flexDirection: "row",
 					justifyContent: "center",
-					width: '80%',
+					width: "90%",
 					marginTop: 100,
 					marginLeft: 50,
 				}}>
 				<img src="/images/main2.png" />
 				<div
 					style={{
-						width: 600,
+						width: 700,
 						height: 450,
 						marginLeft: 40,
 					}}>
@@ -136,12 +146,12 @@ const Main = (props) => {
 					display: "flex",
 					flexDirection: "row",
 					marginTop: 60,
-					width: '80%',
+					width: "90%",
 					justifyContent: "center",
 				}}>
 				<div
 					style={{
-						width: 600,
+						width: 700,
 						height: 450,
 						marginRight: 20,
 					}}>

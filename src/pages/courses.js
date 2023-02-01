@@ -22,18 +22,18 @@ const Courses = (props) => {
 					height: 'auto',
 					paddingBottom: 50
 				}}>
-				<CourseBox name={"Maths"} image={"/images/maths.jpg"} add={true} navigate={"/selection"} state={{name: "maths"}} />
-				<CourseBox name={"Physics"} image={"/images/physics.jpg"} add={true} navigate={"/selection"} state={{name: "physics"}} />
-				<CourseBox name={"Maths"} image={"/images/maths.jpg"} add={true} navigate={"/selection"} state={{name: "maths"}} />
-				<CourseBox name={"Physics"} image={"/images/physics.jpg"} add={true} navigate={"/selection"} state={{name: "physics"}} />
-				<CourseBox name={"Maths"} image={"/images/maths.jpg"} add={true} navigate={"/selection"} state={{name: "maths"}} />
-				<CourseBox name={"Physics"} image={"/images/physics.jpg"} add={true} navigate={"/selection"} state={{name: "physics"}} />
-				<CourseBox name={"Maths"} image={"/images/maths.jpg"} add={true} navigate={"/selection"} state={{name: "maths"}} />
-				<CourseBox name={"Physics"} image={"/images/physics.jpg"} add={true} navigate={"/selection"} state={{name: "physics"}} />
-				<CourseBox name={"Maths"} image={"/images/maths.jpg"} add={true} navigate={"/selection"} state={{name: "maths"}} />
-				<CourseBox name={"Physics"} image={"/images/physics.jpg"} add={true} navigate={"/selection"} state={{name: "physics"}} />
-				<CourseBox name={"Maths"} image={"/images/maths.jpg"} add={true} navigate={"/selection"} state={{name: "maths"}} />
-				<CourseBox name={"Physics"} image={"/images/physics.jpg"} add={true} navigate={"/selection"} state={{name: "physics"}} />
+				<CourseBox name={"Maths"} image={"math.png"} add={true} navigate={"/selection"} state={{name: "maths"}} />
+				<CourseBox name={"Physics"} image={"math.png"} add={true} navigate={"/selection"} state={{name: "physics"}} />
+				<CourseBox name={"Maths"} image={"math.png"} add={true} navigate={"/selection"} state={{name: "maths"}} />
+				<CourseBox name={"Physics"} image={"math.png"} add={true} navigate={"/selection"} state={{name: "physics"}} />
+				<CourseBox name={"Maths"} image={"math.png"} add={true} navigate={"/selection"} state={{name: "maths"}} />
+				<CourseBox name={"Physics"} image={"math.png"} add={true} navigate={"/selection"} state={{name: "physics"}} />
+				<CourseBox name={"Maths"} image={"math.png"} add={true} navigate={"/selection"} state={{name: "maths"}} />
+				<CourseBox name={"Physics"} image={"math.png"} add={true} navigate={"/selection"} state={{name: "physics"}} />
+				<CourseBox name={"Maths"} image={"math.png"} add={true} navigate={"/selection"} state={{name: "maths"}} />
+				<CourseBox name={"Physics"} image={"math.png"} add={true} navigate={"/selection"} state={{name: "physics"}} />
+				<CourseBox name={"Maths"} image={"math.png"} add={true} navigate={"/selection"} state={{name: "maths"}} />
+				<CourseBox name={"Physics"} image={"math.png"} add={true} navigate={"/selection"} state={{name: "physics"}} />
 			</div>
 		</div>
 	);
