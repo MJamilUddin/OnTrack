@@ -10,6 +10,10 @@ const data = {
 		{ name: "GCSE Maths AQA", code: "GCSEMathsAQA" },
 		{ name: "ALevel Maths AQA", code: "AlevelMathsAQA" },
 	],
+	biology: [
+		{ name: "GCSE Biology AQA", code: "GCSEBiologyAQA" },
+		{ name: "ALevel Biology AQA", code: "AlevelBiologyAQA" },
+	],
 	physics: [
 		{ name: "GCSE Physics AQA", code: "GCSEPhysicsAQA" },
 		{ name: "ALevel Physics AQA", code: "ALevelPhysicsAQA" },
