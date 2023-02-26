@@ -1,6 +1,5 @@
 /** @format */
 
-import { GCSEMathsAQA } from "../specifications/GCSEMathsAQA";
 import StudentTracker from "../pages/studentTracker";
 import SubBlock from "./subSpecBlock";
 import { useNavigate, useLocation, Link } from "react-router-dom";

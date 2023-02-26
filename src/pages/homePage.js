@@ -53,13 +53,6 @@ const HomePage = (props) => {
 								navigate={"/spec"}
 								state={{ name: key }}
 							/>
-							<CourseBox
-								name={courseName}
-								image={"/images/maths.jpg"}
-								add={false}
-								navigate={"/spec"}
-								state={{ name: key }}
-							/>
 							</>
 						);
 					})}

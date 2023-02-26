@@ -12,11 +12,15 @@ const data = {
 	],
 	biology: [
 		{ name: "GCSE Biology AQA", code: "GCSEBiologyAQA" },
-		{ name: "ALevel Biology AQA", code: "AlevelBiologyAQA" },
+		// { name: "ALevel Biology AQA", code: "AlevelBiologyAQA" },
+	],
+	chemistry: [
+		{ name: "GCSE Chemistry AQA", code: "GCSEChemistryAQA" },
+		// { name: "ALevel Chemistry AQA", code: "AlevelChemistryAQA" },
 	],
 	physics: [
 		{ name: "GCSE Physics AQA", code: "GCSEPhysicsAQA" },
-		{ name: "ALevel Physics AQA", code: "ALevelPhysicsAQA" },
+		// { name: "ALevel Physics AQA", code: "ALevelPhysicsAQA" },
 	],
 };
 
@@ -42,7 +46,7 @@ function SpecSelection(props) {
 					return (
 						<div
 							style={{
-								width: props.width < 300? props.width : props.width - 350,
+								width: props.width < 300? props.width - 100 : props.width - 450,
 								backgroundColor: "white",
 								display: "flex",
 								margin: 10,

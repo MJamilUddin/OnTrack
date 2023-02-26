@@ -1,9 +1,9 @@
 /** @format */
 
-import { GCSEMathsAQA } from "../specifications/GCSEMathsAQA";
 import StudentTracker from "../pages/studentTracker";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
+import SecondSubBlock from "./secondSubBlock";
 
 const SubBlock = (props) => {
 	const courseObj = props.course;
@@ -41,11 +41,44 @@ const SubBlock = (props) => {
 								? completeArray.includes(specs)
 								: false;
 
+						const subSpecVar = courseObj[key].subs[sub]["spec"].specs;
+						// const isObject = typeof(subSpecVar) === Object;
+						const isObject = true;
+
 						return (
 							<>
-								{props.showFlag ? (
+								{isObject ? (
 									<>
-										{isThere == props.completedMode ? (
+										<SecondSubBlock
+											specNumber={specs}
+											checked={isThere}
+											course={courseObj}
+											keyNum={key}
+											num={sub}
+											completeArray={props.completeArray}
+											setCompleteArray={props.setCompleteArray}
+										/>
+									</>
+								) : (
+									<>
+										{props.showFlag ? (
+											<>
+												{isThere == props.completedMode ? (
+													<div>
+														<StudentTracker
+															specNumber={specs}
+															specification={
+																courseObj[key].subs[sub].spec[specs]
+															}
+															checked={isThere}
+															course={courseObj}
+															completeArray={props.completeArray}
+															setCompleteArray={props.setCompleteArray}
+														/>
+													</div>
+												) : null}
+											</>
+										) : (
 											<div>
 												<StudentTracker
 													specNumber={specs}
@@ -56,19 +89,8 @@ const SubBlock = (props) => {
 													setCompleteArray={props.setCompleteArray}
 												/>
 											</div>
-										) : null}
+										)}
 									</>
-								) : (
-									<div>
-										<StudentTracker
-											specNumber={specs}
-											specification={courseObj[key].subs[sub].spec[specs]}
-											checked={isThere}
-											course={courseObj}
-											completeArray={props.completeArray}
-											setCompleteArray={props.setCompleteArray}
-										/>
-									</div>
 								)}
 							</>
 						);
