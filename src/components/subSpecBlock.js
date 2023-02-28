@@ -41,9 +41,7 @@ const SubBlock = (props) => {
 								? completeArray.includes(specs)
 								: false;
 
-						const subSpecVar = courseObj[key].subs[sub]["spec"].specs;
-						// const isObject = typeof(subSpecVar) === Object;
-						const isObject = true;
+						const isObject = courseObj[1].nested || false;
 
 						return (
 							<>

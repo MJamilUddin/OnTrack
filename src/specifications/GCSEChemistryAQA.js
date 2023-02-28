@@ -3,6 +3,7 @@
 export const GCSEChemistryAQA = {
 	1: {
 		topic: "Atomic structure and the periodic table",
+		nested: true,
 		topicQuestions: "",
 		specLink: "",
 		code: "GCSEChemistryAQA",

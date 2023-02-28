@@ -3,7 +3,7 @@ import { specPicker } from "../functions/specPicker";
 import { imgPicker } from "../functions/courseImgTransfer";
 import { getCompleteArray } from "../services/firebase";
 import { useEffect, useState, useContext } from "react";
-import { findSpecAmount } from "../functions/courseFuncs";
+import { findSpecAmount, findSpecAmountNested } from "../functions/courseFuncs";
 import { UserContext } from "../App";
 
 
@@ -20,8 +20,11 @@ export const CourseBox = (props) => {
 		// console.log('complete Array', data.completeArray);
 		if (data.completeArray !== undefined) {
 			setCompleteArray(data.completeArray);
+
+            const nested = courseObj[1].nested || false;
+			const specAmount = nested? findSpecAmountNested(courseObj) : findSpecAmount(courseObj);
 			
-			const percentageNumber = data.completeArray.length/findSpecAmount(courseObj);
+			const percentageNumber = data.completeArray.length/specAmount;
 			setCompletePercentage(parseFloat(percentageNumber.toFixed(2)))
 		} else {
 			setCompleteArray([]);

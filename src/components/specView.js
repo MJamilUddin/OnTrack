@@ -10,6 +10,7 @@ import { useEffect, useState, useContext } from "react";
 import {
 	findSpecAmount,
 	findSpecAmountByTopic,
+	findSpecAmountByTopicNested,
 } from "../functions/courseFuncs";
 
 const SpecView = (props) => {
@@ -58,9 +59,12 @@ const SpecView = (props) => {
 			const topicCompleteArray = completeArray.filter(
 				(num) => num.substring(0, num.indexOf(".")) === key
 			);
+			const nested = courseObj[1].nested || false;
+			const specAmount = nested? findSpecAmountByTopicNested(courseObj, courseObj[key].topic) : findSpecAmountByTopic(courseObj, courseObj[key].topic);
+
 			const percentage =
 				topicCompleteArray.length /
-				findSpecAmountByTopic(courseObj, courseObj[key].topic);
+				specAmount;
 
 			return percentage * 100;
 		}
