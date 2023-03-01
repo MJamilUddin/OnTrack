@@ -1,8 +1,8 @@
 /** @format */
 
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { addSubCollection } from "../services/firebase";
+import { addSubCollection, getCoursesList } from "../services/firebase";
 import { UserContext } from "../App";
 
 const data = {
@@ -24,11 +24,76 @@ const data = {
 	],
 };
 
-function SpecSelection(props) {
+const SpecSelection = (props) => {
+	const width = props.width
 	const userData = useContext(UserContext);
 	const { state } = useLocation();
 	const { name } = state;
 	const mapArray = data[name];
+	const [courseList, setCourseList] = useState();
+
+	useEffect(() => {
+		const getCourseData = async() => {
+			const info = await getCoursesList(userData.uid);
+			setCourseList(Object.keys(info));
+		}
+
+		getCourseData();
+	}, [])
+
+	const SpecButton = (props) => {
+		const [hover, setHover] = useState(false);
+		let courseIn = false
+
+		if (courseList !== undefined) {
+			courseIn = courseList.includes(props.code);
+		}
+		
+		return (
+			<div
+				style={{
+					width: width < 300? width - 350 : width - 600,
+					backgroundColor: "white",
+					display: "flex",
+					margin: 10,
+					height: "auto",
+					borderRadius: 10,
+					flexDirection: "row",
+					padding: 30,
+					alignItems: 'center',
+					justifyContent: "space-between",
+				}}>
+				<text style={{ fontSize: 20, color: "black", fontFamily: 'inter', fontWeight: '500'  }}>
+					{props.name}
+				</text>
+				<div
+					onMouseEnter={() => setHover(true)}
+					onMouseLeave={() => setHover(false)}
+					style={{
+						display: 'flex',
+						width: 90,
+						height: 40,
+						borderRadius: 10,
+						backgroundColor: hover || courseIn? "green" : "#FABB18",
+						marginRight: 20,
+						justifyContent: 'center',
+						alignItems: 'center'
+					}}
+					onClick={() => {
+						addSubCollection(userData.uid, props.code);
+						setCourseList(prev => [...prev, props.code])
+					}}>
+						{courseIn? 
+						<text style={{ fontWeight: 900, fontSize: 16, color: 'black' }}>Added</text>
+						:
+						<text style={{ fontWeight: 900, fontSize: 16, color: 'black' }}>Add</text>
+						}
+					
+				</div>
+			</div>
+		);
+	}
+
 
 	return (
 		<>
@@ -44,40 +109,8 @@ function SpecSelection(props) {
 				<h2 style={{marginLeft: 30}}>Specifications</h2>	
 				{mapArray.map((course) => {
 					return (
-						<div
-							style={{
-								width: props.width < 300? props.width - 100 : props.width - 450,
-								backgroundColor: "white",
-								display: "flex",
-								margin: 10,
-								height: "auto",
-								borderRadius: 10,
-								flexDirection: "row",
-								padding: 30,
-								alignItems: 'center',
-								justifyContent: "space-between",
-							}}>
-							<text style={{ fontSize: 20, color: "black", fontFamily: 'inter', fontWeight: '500'  }}>
-								{course.name}
-							</text>
-							<div
-								style={{
-									display: 'flex',
-									width: 90,
-									height: 40,
-									borderRadius: 10,
-									backgroundColor: "#FABB18",
-									marginRight: 20,
-									justifyContent: 'center',
-									alignItems: 'center'
-								}}
-								onClick={() => {
-									addSubCollection(userData.uid, course.code);
-								}}>
-								<text style={{ fontWeight: 900, fontSize: 16, color: 'black' }}>Add</text>
-							</div>
-						</div>
-					);
+					<SpecButton name={course.name} code={course.code} />
+					)
 				})}
 			</div>
 		</>

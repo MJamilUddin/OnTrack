@@ -478,20 +478,32 @@ export const GCSEChemistryAQA = {
 			3.4: {
 				"sub-topic": "Using concentrations of solutions in mol/dm3 (chemistry only) (HT only)",
 				spec: {
-					3.41:"The concentration of a solution can be measured in mol/dm3 . ",
-					3.42:"The amount in moles of solute or the mass in grams of solute in a given volume of solution can be calculated from its concentration in mol/dm3 . ",
-					3.43:"If the volumes of two solutions that react completely are known and the concentration of one solution is known, the concentration of the other solution can be calculated.",
-					3.44:" Students should be able to explain how the concentration of a solution in mol/dm3 is related to the mass of the solute and the volume of the solution.",
+					3.41: {
+						"sub-topic": "Using concentrations of solutions in mol/dm3 (chemistry only) (HT only)",
+						spec: {
+							3.411:"The concentration of a solution can be measured in mol/dm3 . ",
+							3.412:"The amount in moles of solute or the mass in grams of solute in a given volume of solution can be calculated from its concentration in mol/dm3 . ",
+							3.413:"If the volumes of two solutions that react completely are known and the concentration of one solution is known, the concentration of the other solution can be calculated.",
+							3.414:" Students should be able to explain how the concentration of a solution in mol/dm3 is related to the mass of the solute and the volume of the solution.",
+						}
+					}
+					
 				},
 			},
 			3.5: {
 				"sub-topic": "Use of amount of substance in relation to volumes of gases (chemistry only) (HT only)",
 				spec: {
-					3.51:"Equal amounts in moles of gases occupy the same volume under the same conditions of temperature and pressure.",
-					3.52:" The volume of one mole of any gas at room temperature and pressure (20oc and 1 atmosphere pressure) is 24 dm3 . ",
-					3.53:"The volumes of gaseous reactants and products can be calculated from the balanced equation for the reaction.",
-					3.54:" Students should be able to:\n • calculate the volume of a gas at room temperature and pressure from its mass and relative formula mass\n • calculate volumes of gaseous reactants and products from a balanced equation and a given volume of a gaseous reactant or product\n • change the subject of a mathematical equation.",
-
+					3.51: {
+						"sub-topic": "Use of amount of substance in relation to volumes of gases (chemistry only) (HT only)",
+						spec: {
+							3.511:"Equal amounts in moles of gases occupy the same volume under the same conditions of temperature and pressure.",
+							3.512:" The volume of one mole of any gas at room temperature and pressure (20oc and 1 atmosphere pressure) is 24 dm3 . ",
+							3.513:"The volumes of gaseous reactants and products can be calculated from the balanced equation for the reaction.",
+							3.514:" Students should be able to:\n • calculate the volume of a gas at room temperature and pressure from its mass and relative formula mass\n • calculate volumes of gaseous reactants and products from a balanced equation and a given volume of a gaseous reactant or product\n • change the subject of a mathematical equation.",
+						}
+					}
+					
+					
 				},
 			},
 		},
