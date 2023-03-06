@@ -2,13 +2,11 @@ const nameTransfer = {
     "GCSEMathsAQA": "GCSE Maths AQA", 
     "GCSEBiologyAQA": "GCSE Biology AQA", 
     "GCSEPhysicsAQA": "GCSE Physics AQA", 
-<<<<<<< HEAD
     "GCSEChemistryAQA": "GCSE Chemistry AQA",
     "AlevelMathsAQA": "A-level Maths AQA", 
-=======
-    "GCSEBiologyAQA": "GCSE Physics AQA", 
->>>>>>> fc37400 (functions change)
-    "AlevelPhysicsAQA": "A-level Physics AQA"
+    "AlevelPhysicsAQA": "A-level Physics AQA",
+    "AlevelChemistryAQA": "A-level Chemistry AQA",
+    "AlevelBiologyAQA": "A-level Biology AQA"
 };
 
 export default nameTransfer;

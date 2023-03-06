@@ -60,8 +60,9 @@ const SpecView = (props) => {
 				(num) => num.substring(0, num.indexOf(".")) === key
 			);
 			const nested = courseObj[1].nested || false;
-			const specAmount = nested? findSpecAmountByTopicNested(courseObj, courseObj[key].topic) : findSpecAmountByTopic(courseObj, courseObj[key].topic);
-
+			// const specAmount = nested? findSpecAmountByTopicNested(courseObj, courseObj[key].topic) : findSpecAmountByTopic(courseObj, courseObj[key].topic);
+			const specAmount = findSpecAmountByTopic(courseObj, courseObj[key].topic);
+			
 			const percentage =
 				topicCompleteArray.length /
 				specAmount;

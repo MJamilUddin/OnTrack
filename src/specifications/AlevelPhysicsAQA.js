@@ -3,6 +3,7 @@
 export const ALevelPhysicsAQA = {
 	1: {
 		topic: "Measurements and their errors",
+		nested: true,
 		topicQuestions: "",
 		specLink: "",
 		code: "ALevelPhysicsAQA",
@@ -12,41 +13,48 @@ export const ALevelPhysicsAQA = {
 		level: "A-level",
 		subs: {
 			1.1: {
-				"sub-topic": "Use of SI units and their prefixes",
+				"sub-topic": "Measurements and their errors",
 				spec: {
-					1.11: "Fundamental (base) units.", 
-					1.12: "Use of mass, length, time, amount of substance, temperature, electric current and their associated SI units. ", 
-					1.13: "SI units derived.", 
-					1.14: " Knowledge and use of the SI prefixes, values and standard form. ", 
-					1.15: "The fundamental unit of light intensity, the candela, is excluded.", 
-					1.16: " Students are not expected to recall definitions of the fundamental quantities. ", 
-					1.17: "Dimensional analysis is not required. ", 
-					1.18: "Students should be able to use the prefixes: T,G, M, k, c, m, μ, n, p, f, ", 
-					1.19: "Students should be able to convert between different units of the same quantity, eg J and eV, J and kW h.", 
+					1.11: {
+						"sub-topic": "Use of SI units and their prefixes",
+						spec: {
+							1.111: "Fundamental (base) units.",
+							1.112: "Use of mass, length, time, amount of substance, temperature, electric current and their associated SI units. ",
+							1.113: "SI units derived.",
+							1.114: " Knowledge and use of the SI prefixes, values and standard form. ",
+							1.115: "The fundamental unit of light intensity, the candela, is excluded.",
+							1.116: " Students are not expected to recall definitions of the fundamental quantities. ",
+							1.117: "Dimensional analysis is not required. ",
+							1.118: "Students should be able to use the prefixes: T,G, M, k, c, m, μ, n, p, f, ",
+							1.119: "Students should be able to convert between different units of the same quantity, eg J and eV, J and kW h.",
 
-				},
-			},
-			1.2: {
-				"sub-topic": "Limitation of physical measurements",
-				spec: {
-					1.21: "Random and systematic errors. ", 
-					1.22: "Precision, repeatability, reproducibility, resolution and accuracy. ", 
-					1.23: "Uncertainty: \n Absolute, fractional and percentage uncertainties represent uncertainty in the final answer for a quantity. ", 
-					1.24: "Combination of absolute and percentage uncertainties. ", 
-					1.25: "Represent uncertainty in a data point on a graph using error bars. ", 
-					1.26: "Determine the uncertainties in the gradient and intercept of a straight-line graph. ", 
-					1.27: "Individual points on the graph may or may not have associated error bars.", 
-					
-				},
-			},
-			1.3: {
-				"sub-topic": "Estimation of physical quantities",
-				spec: {
-					1.31: "Orders of magnitude. ", 
-					1.32: "Estimation of approximate values of physical quantities.", 
-					
-				},
-			},
+						},
+					},
+					1.12: {
+						"sub-topic": "Limitation of physical measurements",
+						spec: {
+							1.121: "Random and systematic errors. ",
+							1.122: "Precision, repeatability, reproducibility, resolution and accuracy. ",
+							1.123: "Uncertainty: \n Absolute, fractional and percentage uncertainties represent uncertainty in the final answer for a quantity. ",
+							1.124: "Combination of absolute and percentage uncertainties. ",
+							1.125: "Represent uncertainty in a data point on a graph using error bars. ",
+							1.126: "Determine the uncertainties in the gradient and intercept of a straight-line graph. ",
+							1.127: "Individual points on the graph may or may not have associated error bars.",
+
+						},
+					},
+					1.13: {
+						"sub-topic": "Estimation of physical quantities",
+						spec: {
+							1.131: "Orders of magnitude. ",
+							1.132: "Estimation of approximate values of physical quantities.",
+
+						},
+					},
+
+				}
+			}
+
 		},
 	},
 	2: {
@@ -219,7 +227,7 @@ export const ALevelPhysicsAQA = {
 							3.135: "A graphical explanation of formation of stationary waves will be expected.",
 							3.136: " Stationary waves formed on a string and those produced with microwaves and sound waves should be considered.",
 							3.137: " Stationary waves on strings will be described in terms of harmonics. The terms fundamental (for first harmonic) and overtone will not be used.",
-							
+
 						},
 					},
 				},
@@ -267,7 +275,7 @@ export const ALevelPhysicsAQA = {
 					},
 				},
 			},
-			
+
 		},
 	},
 	4: {
@@ -310,7 +318,7 @@ export const ALevelPhysicsAQA = {
 							4.133: "Representation by graphical methods of uniform and non-uniform acceleration. ",
 							4.134: "Significance of areas of velocity–time and acceleration– time graphs and gradients of displacement–time and velocity–time graphs for uniform and non-uniform acceleration eg graphs for motion of bouncing ball.",
 							4.135: " Equations for uniform acceleration : \n 3.4.1.3 ",
-							
+
 						},
 					},
 					4.14: {
@@ -323,7 +331,7 @@ export const ALevelPhysicsAQA = {
 							4.145: "Terminal speed.",
 							4.146: " Knowledge that air resistance increases with speed. ",
 							4.147: "Qualitative understanding of the effect of air resistance on the trajectory of a projectile and on the factors that affect the maximum speed of a vehicle.",
-							
+
 						},
 					},
 					4.15: {
@@ -385,7 +393,7 @@ export const ALevelPhysicsAQA = {
 							4.218: "Spring energy transformed to kinetic and gravitational potential energy. ",
 							4.219: "Interpretation of simple stress–strain curves. ",
 							4.2110: "Appreciation of energy conservation issues in the context of ethical transport design.",
-							
+
 						},
 					},
 					4.22: {
@@ -538,7 +546,7 @@ export const ALevelPhysicsAQA = {
 							6.224: "Work done = p∆V ",
 							6.225: "Avogadro constant NA, molar gas constant R, Boltzmann constant k ",
 							6.226: "Molar mass and molecular mass.",
-							
+
 						},
 					},
 					6.23: {
@@ -565,36 +573,36 @@ export const ALevelPhysicsAQA = {
 			7.1: {
 				"sub-topic": "Fields (A-level only)",
 				spec: {
-					7.11: "Concept of a force field as a region in which a body experiences a non-contact force.", 
-					7.12: " Students should recognise that a force field can be represented as a vector, the direction of which must be determined by inspection. ", 
-					7.13: "Force fields arise from the interaction of mass, of static charge, and between moving charges.", 
-					7.14: " Similarities and differences between gravitational and electrostatic forces: ", 
-					7.15: "Similarities: Both have inverse-square force laws that have many characteristics in common, eg use of field lines, use of potential concept, equipotential surfaces etc", 
-					7.15: " Differences: masses always attract, but charges may attract or repel", 
+					7.11: "Concept of a force field as a region in which a body experiences a non-contact force.",
+					7.12: " Students should recognise that a force field can be represented as a vector, the direction of which must be determined by inspection. ",
+					7.13: "Force fields arise from the interaction of mass, of static charge, and between moving charges.",
+					7.14: " Similarities and differences between gravitational and electrostatic forces: ",
+					7.15: "Similarities: Both have inverse-square force laws that have many characteristics in common, eg use of field lines, use of potential concept, equipotential surfaces etc",
+					7.15: " Differences: masses always attract, but charges may attract or repel",
 				},
 			},
 			7.2: {
 				"sub-topic": "Gravitational fields (A-level only)",
 				spec: {
 					7.21: {
-                        "sub-topic": "Newton's law (A-level only)",
-                        spec: {
-                            7.211: "Gravity as a universal attractive force acting between all matter. ",
+						"sub-topic": "Newton's law (A-level only)",
+						spec: {
+							7.211: "Gravity as a universal attractive force acting between all matter. ",
 							7.212: "Magnitude of force between point masses: F = Gm1m2 /r 2 where G is the gravitational constant",
-                        },
-                    },
-                    7.22: {
-                        "sub-topic": "Gravitational field strength (A-level only)",
-                        spec: {
-                            7.221: "Representation of a gravitational field by gravitational field lines. ",
+						},
+					},
+					7.22: {
+						"sub-topic": "Gravitational field strength (A-level only)",
+						spec: {
+							7.221: "Representation of a gravitational field by gravitational field lines. ",
 							7.222: "g as force per unit mass as defined by 3.7.2.2",
 							7.223: "Magnitude of g in a radial field given by 3.7.2.2",
-                        },
-                    },
-                    7.23: {
-                        "sub-topic": "Gravitational potential (A-level only)",
-                        spec: {
-                            7.231: "Understanding of definition of gravitational potential, including zero value at infinity. ",
+						},
+					},
+					7.23: {
+						"sub-topic": "Gravitational potential (A-level only)",
+						spec: {
+							7.231: "Understanding of definition of gravitational potential, including zero value at infinity. ",
 							7.232: "Understanding of gravitational potential difference. ",
 							7.233: "Work done in moving mass m given by ∆W = m∆V ",
 							7.234: "Equipotential surfaces.",
@@ -604,51 +612,51 @@ export const ALevelPhysicsAQA = {
 							7.238: "Graphical representations of variations of g and V with r. ",
 							7.239: "V related to g by: g = − ∆V /∆ r ",
 							7.2310: "∆V from area under graph of g against r.",
-                        },
-                    },
+						},
+					},
 					7.24: {
-                        "sub-topic": "Orbits of planets and satellites (A-level only)",
-                        spec: {
-                            7.241: "Orbital period and speed related to radius of circular orbit; derivation of T 2 ∝ r 3 ",
+						"sub-topic": "Orbits of planets and satellites (A-level only)",
+						spec: {
+							7.241: "Orbital period and speed related to radius of circular orbit; derivation of T 2 ∝ r 3 ",
 							7.242: "Energy considerations for an orbiting satellite.",
 							7.243: "Total energy of an orbiting satellite.",
 							7.244: "  Escape velocity.",
 							7.245: " Synchronous orbits.",
 							7.246: " Use of satellites in low orbits and geostationary orbits, to include plane and radius of geostationary orbit.",
-                        },
-                    },
+						},
+					},
 				},
 			},
-            7.3: {
+			7.3: {
 				"sub-topic": "Electric fields (A-level only)",
 				spec: {
 					7.31: {
-                        "sub-topic": "Coulomb's law (A-level only)",
-                        spec: {
-                            7.311: "Force between point charges in a vacuum: formula 3.7.3.1",
+						"sub-topic": "Coulomb's law (A-level only)",
+						spec: {
+							7.311: "Force between point charges in a vacuum: formula 3.7.3.1",
 							7.312: " Permittivity of free space, ε0",
 							7.313: " Appreciation that air can be treated as a vacuum when calculating force between charges.",
 							7.314: " For a charged sphere, charge may be considered to be at the centre. ",
 							7.315: "Comparison of magnitude of gravitational and electrostatic forces between subatomic particles.",
-                        },
-                    },
-                    7.32: {
-                        "sub-topic": "Electric field strength (A-level only)",
-                        spec: {
-                            7.321: "Representation of electric fields by electric field lines. ",
+						},
+					},
+					7.32: {
+						"sub-topic": "Electric field strength (A-level only)",
+						spec: {
+							7.321: "Representation of electric fields by electric field lines. ",
 							7.322: "Electric field strength.",
 							7.323: "E as force per unit charge defined by E = F /Q ",
 							7.324: "Magnitude of E in a uniform field given by E = V /d ",
 							7.325: "Derivation from work done moving charge between plates: Fd = QΔV",
 							7.326: " Trajectory of moving charged particle entering a uniform electric field initially at right angles.",
 							7.327: " Magnitude of E in a radial field given by formula 3.7.3.2",
-						
-                        },
-                    },
-                    7.33: {
-                        "sub-topic": "Electric potential (A-level only)",
-                        spec: {
-                            7.331: "Understanding of definition of absolute electric potential, including zero value at infinity, and of electric potential difference.",
+
+						},
+					},
+					7.33: {
+						"sub-topic": "Electric potential (A-level only)",
+						spec: {
+							7.331: "Understanding of definition of absolute electric potential, including zero value at infinity, and of electric potential difference.",
 							7.332: "Work done in moving charge Q given by ∆ W = Q∆V ",
 							7.333: "Equipotential surfaces.",
 							7.334: " No work done moving charge along an equipotential surface.",
@@ -656,38 +664,38 @@ export const ALevelPhysicsAQA = {
 							7.336: "Graphical representations of variations of E and V with r.",
 							7.337: " V related to E by E = ∆V /∆ r",
 							7.338: " ∆V from the area under graph of E against r.",
-                        },
-                    },
+						},
+					},
 				},
 			},
-            7.4: {
+			7.4: {
 				"sub-topic": "Capacitance (A-level only)",
 				spec: {
 					7.41: {
-                        "sub-topic": "Capacitance (A-level only)",
-                        spec: {
-                            7.411: "Definition of capacitance: C =Q/V",
-                        },
-                    },
-                    7.42: {
-                        "sub-topic": "Parallel plate capacitor (A-level only)",
-                        spec: {
-                            7.421: "Dielectric action in a capacitor C = ",
+						"sub-topic": "Capacitance (A-level only)",
+						spec: {
+							7.411: "Definition of capacitance: C =Q/V",
+						},
+					},
+					7.42: {
+						"sub-topic": "Parallel plate capacitor (A-level only)",
+						spec: {
+							7.421: "Dielectric action in a capacitor C = ",
 							7.422: "Relative permittivity and dielectric constant. ",
 							7.423: "Students should be able to describe the action of a simple polar molecule that rotates in the presence of an electric field.",
-                        },
-                    },
-                    7.43: {
-                        "sub-topic": "Energy stored by a capacitor (A-level only)",
-                        spec: {
-                            7.431: "Interpretation of the area under a graph of charge against pd.",
+						},
+					},
+					7.43: {
+						"sub-topic": "Energy stored by a capacitor (A-level only)",
+						spec: {
+							7.431: "Interpretation of the area under a graph of charge against pd.",
 							7.432: "Formula 3.7.4.3",
-                        },
-                    },
+						},
+					},
 					7.44: {
-                        "sub-topic": "Capacitor charge and discharge (A-level only)",
-                        spec: {
-                            7.441: "Graphical representation of charging and discharging of capacitors through resistors. Corresponding graphs for Q, V and I against time for charging and discharging. ",
+						"sub-topic": "Capacitor charge and discharge (A-level only)",
+						spec: {
+							7.441: "Graphical representation of charging and discharging of capacitors through resistors. Corresponding graphs for Q, V and I against time for charging and discharging. ",
 							7.442: "Interpretation of gradients and areas under graphs where appropriate.",
 							7.443: " Time constant RC.",
 							7.444: " Calculation of time constants including their determination from graphical data.",
@@ -695,71 +703,71 @@ export const ALevelPhysicsAQA = {
 							7.446: "Quantitative treatment of capacitor discharge, formula 3.7.4.4",
 							7.447: " Use of the corresponding equations for V and  I",
 							7.448: " Quantitative treatment of capacitor charge, formula 3.7.4.4",
-							
-                        },
-                    },
+
+						},
+					},
 				},
 			},
 			7.5: {
 				"sub-topic": "Magnetic fields (A-level only)",
 				spec: {
 					7.51: {
-                        "sub-topic": "Magnetic flux density (A-level only)",
-                        spec: {
-                            7.511: "Force on a current-carrying wire in a magnetic field: F = BIl when field is perpendicular to current.",
+						"sub-topic": "Magnetic flux density (A-level only)",
+						spec: {
+							7.511: "Force on a current-carrying wire in a magnetic field: F = BIl when field is perpendicular to current.",
 							7.512: " Fleming’s left hand rule. ",
 							7.513: "Magnetic flux density B and definition of the tesla.",
-                        },
-                    },
-                    7.52: {
-                        "sub-topic": "Moving charges in a magnetic field (A-level only)",
-                        spec: {
-                            7.521: "Force on charged particles moving in a magnetic field, F = BQv when the field is perpendicular to velocity. ",
+						},
+					},
+					7.52: {
+						"sub-topic": "Moving charges in a magnetic field (A-level only)",
+						spec: {
+							7.521: "Force on charged particles moving in a magnetic field, F = BQv when the field is perpendicular to velocity. ",
 							7.522: "Direction of force on positive and negative charged particles. ",
 							7.523: "Circular path of particles; application in devices such as the cyclotron.",
 
-                        },
-                    },
-                    7.53: {
-                        "sub-topic": "Magnetic flux and flux linkage (A-level only)",
-                        spec: {
-                            7.531: "Magnetic flux defined by Φ = BA where B is normal to A.",
+						},
+					},
+					7.53: {
+						"sub-topic": "Magnetic flux and flux linkage (A-level only)",
+						spec: {
+							7.531: "Magnetic flux defined by Φ = BA where B is normal to A.",
 							7.532: " Flux linkage as NΦ where N is the number of turns cutting the flux. ",
 							7.533: "Flux and flux linkage passing through a rectangular coil rotated in a magnetic field:",
 							7.534: " flux linkage NΦ = BANcosθ",
-                        },
-                    },
+						},
+					},
 					7.54: {
-                        "sub-topic": "Electromagnetic induction (A-level only)",
-                        spec: {
-                            7.541: "Simple experimental phenomena.",
+						"sub-topic": "Electromagnetic induction (A-level only)",
+						spec: {
+							7.541: "Simple experimental phenomena.",
 							7.542: " Faraday’s and Lenz’s laws. ",
 							7.543: "Magnitude of induced emf = rate of change of flux linkage ε = N ∆Φ /∆ t ",
 							7.544: "Applications such as a straight conductor moving in a magnetic field. ",
 							7.545: "emf induced in a coil rotating uniformly in a magnetic field: ε = BANωsin ωt",
-                        },
-                    },
+						},
+					},
 					7.55: {
-                        "sub-topic": "Alternating currents (A-level only)",
-                        spec: {
-                            7.551: "Sinusoidal voltages and currents only; root mean square, peak and peak-to-peak values for sinusoidal waveforms only.",
+						"sub-topic": "Alternating currents (A-level only)",
+						spec: {
+							7.551: "Sinusoidal voltages and currents only; root mean square, peak and peak-to-peak values for sinusoidal waveforms only.",
 							7.552: "formula 3.7.5.5",
 							7.553: "Application to the calculation of mains electricity peak and peak-to-peak voltage values. ",
 							7.554: "Use of an oscilloscope as a dc and ac voltmeter, to measure time intervals and frequencies, and to display ac waveforms.",
 							7.555: " No details of the structure of the instrument are required but familiarity with the operation of the controls is expected.",
-                        },
-                    },
+						},
+					},
 					7.56: {
-                        "sub-topic": "The operation of a transformer (A-level only)",
-                        spec: {
-                            7.561: "The transformer equation:",
+						"sub-topic": "The operation of a transformer (A-level only)",
+						spec: {
+							7.561: "The transformer equation:",
 							7.562: " Transformer efficiency",
 							7.563: " Production of eddy currents.",
 							7.564: " Causes of inefficiencies in a transformer.",
 							7.565: " Transmission of electrical power at high voltage including calculations of power loss in transmission lines.",
 
-                        },
-                    },
+						},
+					},
 				},
 			},
 		},
@@ -772,28 +780,28 @@ export const ALevelPhysicsAQA = {
 				"sub-topic": "Radioactivity (A-level only)",
 				spec: {
 					8.11: {
-                        "sub-topic": "Rutherford scattering (A-level only)",
-                        spec: {
-                            8.111: "Qualitative study of Rutherford scattering.",
+						"sub-topic": "Rutherford scattering (A-level only)",
+						spec: {
+							8.111: "Qualitative study of Rutherford scattering.",
 							8.112: " Appreciation of how knowledge and understanding of the structure of the nucleus has changed over time.",
-                        },
-                    },
-                    8.12: {
-                        "sub-topic": "α, β and γ radiation (A-level only)",
-                        spec: {
-                            8.121: "Their properties and experimental identification using simple absorption experiments; applications eg to relative hazards of exposure to humans. ",
+						},
+					},
+					8.12: {
+						"sub-topic": "α, β and γ radiation (A-level only)",
+						spec: {
+							8.121: "Their properties and experimental identification using simple absorption experiments; applications eg to relative hazards of exposure to humans. ",
 							8.122: "Applications also include thickness measurements of aluminium foil paper and steel. ",
 							8.123: "Inverse-square law for γ radiation: I =",
 							8.124: " Experimental verification of inverse-square law. ",
 							8.125: "Applications eg to safe handling of radioactive sources. ",
 							8.126: "Background radiation; examples of its origins and experimental elimination from calculations. ",
 							8.127: "Appreciation of balance between risk and benefits in the uses of radiation in medicine.",
-                        },
-                    },
-                    8.13: {
-                        "sub-topic": "Radioactive decay (A-level only)",
-                        spec: {
-                            8.131: "Random nature of radioactive decay; constant decay probability of a given nucleus;",
+						},
+					},
+					8.13: {
+						"sub-topic": "Radioactive decay (A-level only)",
+						spec: {
+							8.131: "Random nature of radioactive decay; constant decay probability of a given nucleus;",
 							8.132: "formula 3.8.1.3",
 							8.133: " Use of activity, A = λN",
 							8.134: " Modelling with constant decay probability.",
@@ -802,23 +810,23 @@ export const ALevelPhysicsAQA = {
 							8.137: "Half-life equation: T½ = ln2/λ ",
 							8.138: "Determination of half-life from graphical decay data including decay curves and log graphs.",
 							8.139: " Applications eg relevance to storage of radioactive waste, radioactive dating etc.",
-							
-                        },
-                    },
+
+						},
+					},
 					8.14: {
-                        "sub-topic": "Nuclear instability (A-level only)",
-                        spec: {
-                            8.141: "Graph of N against Z for stable nuclei. ",
+						"sub-topic": "Nuclear instability (A-level only)",
+						spec: {
+							8.141: "Graph of N against Z for stable nuclei. ",
 							8.142: "Possible decay modes of unstable nuclei including α, β + , β − and electron capture.",
 							8.143: "Changes in N and Z caused by radioactive decay and representation in simple decay equations. ",
 							8.144: "Questions may use nuclear energy level diagrams.",
 							8.145: " Existence of nuclear excited states; γ ray emission; application eg use of technetium-99m as a γ source in medical diagnosis",
-                        },
-                    },
+						},
+					},
 					8.15: {
-                        "sub-topic": "Nuclear radius (A-level only)",
-                        spec: {
-                            8.151: "Estimate of radius from closest approach of alpha particles and determination of radius from electron diffraction. ",
+						"sub-topic": "Nuclear radius (A-level only)",
+						spec: {
+							8.151: "Estimate of radius from closest approach of alpha particles and determination of radius from electron diffraction. ",
 							8.152: "Knowledge of typical values for nuclear radius. ",
 							8.153: "Students will need to be familiar with the Coulomb equation for the closest approach estimate.",
 							8.154: " Dependence of radius on nucleon number: ",
@@ -826,13 +834,13 @@ export const ALevelPhysicsAQA = {
 							8.156: " Interpretation of equation as evidence for constant density of nuclear material. ",
 							8.157: "Calculation of nuclear density.",
 							8.158: " Students should be familiar with the graph of intensity against angle for electron diffraction by a nucleus",
-						
-                        },
-                    },
+
+						},
+					},
 					8.16: {
-                        "sub-topic": "Mass and energy (A-level only)",
-                        spec: {
-                            8.161: "Appreciation that E = mc 2 applies to all energy changes, ",
+						"sub-topic": "Mass and energy (A-level only)",
+						spec: {
+							8.161: "Appreciation that E = mc 2 applies to all energy changes, ",
 							8.162: "Simple calculations involving mass difference and binding energy. ",
 							8.163: "Atomic mass unit, u. ",
 							8.164: "Conversion of units; 1 u = 931.5 MeV.",
@@ -841,29 +849,29 @@ export const ALevelPhysicsAQA = {
 							8.167: "Graph of average binding energy per nucleon against nucleon number. ",
 							8.168: "Students may be expected to identify, on the plot, the regions where nuclei will release energy when undergoing fission/fusion. ",
 							8.169: "Appreciation that knowledge of the physics of nuclear energy allows society to use science to inform decision making.",
-						
-                        },
-                    },
+
+						},
+					},
 					8.17: {
-                        "sub-topic": "Induced fission (A-level only)",
-                        spec: {
-                            8.171: "Fission induced by thermal neutrons; possibility of a chain reaction; critical mass.",
+						"sub-topic": "Induced fission (A-level only)",
+						spec: {
+							8.171: "Fission induced by thermal neutrons; possibility of a chain reaction; critical mass.",
 							8.172: " The functions of the moderator, control rods, and coolant in a thermal nuclear reactor. ",
 							8.173: "Details of particular reactors are not required. ",
 							8.174: "Students should have studied a simple mechanical model of moderation by elastic collisions. ",
 							8.175: "Factors affecting the choice of materials for the moderator, control rods and coolant. Examples of materials used for these functions.",
-                        },
-                    },
+						},
+					},
 					8.18: {
-                        "sub-topic": "Safety aspects (A-level only)",
-                        spec: {
-                            8.181: "Fuel used, remote handling of fuel, shielding, emergency shut-down.",
+						"sub-topic": "Safety aspects (A-level only)",
+						spec: {
+							8.181: "Fuel used, remote handling of fuel, shielding, emergency shut-down.",
 							8.182: " Production, remote handling, and storage of radioactive waste materials.",
 							8.183: " Appreciation of balance between risk and benefits in the development of nuclear power.",
-                        },
-                    },
+						},
+					},
 				},
-			},			
+			},
 		},
 	},
 	9: {
@@ -874,65 +882,65 @@ export const ALevelPhysicsAQA = {
 				"sub-topic": "Telescopes (A-level only)",
 				spec: {
 					9.11: {
-                        "sub-topic": "Astronomical telescope consisting of two converging lenses (A-level only)",
-                        spec: {
-                            9.111: "Ray diagram to show the image formation in normal adjustment.",
+						"sub-topic": "Astronomical telescope consisting of two converging lenses (A-level only)",
+						spec: {
+							9.111: "Ray diagram to show the image formation in normal adjustment.",
 							9.112: " Angular magnification in normal adjustment.",
 							9.113: " M = angle subtended by image at eye/ angle subtended by object at unaided eye",
 							9.114: " Focal lengths of the lenses formula 3.9.1.1",
-                        },
-                    },
-                    9.12: {
-                        "sub-topic": "Reflecting telescopes (A-level only)",
-                        spec: {
-                            9.121: "Cassegrain arrangement using a parabolic concave primary mirror and convex secondary mirror.",
+						},
+					},
+					9.12: {
+						"sub-topic": "Reflecting telescopes (A-level only)",
+						spec: {
+							9.121: "Cassegrain arrangement using a parabolic concave primary mirror and convex secondary mirror.",
 							9.122: "Ray diagram to show path of rays through the telescope up to the eyepiece. ",
 							9.123: "Relative merits of reflectors and refractors including a qualitative treatment of spherical and chromatic aberration.",
-                        },
-                    },
-                    9.13: {
-                        "sub-topic": "Single dish radio telescopes, I-R, U-V and X-ray telescopes (A-level only)",
-                        spec: {
-                            9.131: "Similarities and differences of radio telescopes compared to optical telescopes. Discussion should include structure, positioning and use, together with comparisons of resolving and collecting powers.",
-                        },
-                    },
+						},
+					},
+					9.13: {
+						"sub-topic": "Single dish radio telescopes, I-R, U-V and X-ray telescopes (A-level only)",
+						spec: {
+							9.131: "Similarities and differences of radio telescopes compared to optical telescopes. Discussion should include structure, positioning and use, together with comparisons of resolving and collecting powers.",
+						},
+					},
 					9.14: {
-                        "sub-topic": "Advantages of large diameter telescopes (A-level only)",
-                        spec: {
-                            9.141: "Minimum angular resolution of telescope. ",
+						"sub-topic": "Advantages of large diameter telescopes (A-level only)",
+						spec: {
+							9.141: "Minimum angular resolution of telescope. ",
 							9.142: "Rayleigh criterion, θ ≈ λ /D ",
 							9.143: "Collecting power is proportional to diameter2 . ",
 							9.144: "Students should be familiar with the rad as the unit of angle.",
 							9.145: " Comparison of the eye and CCD as detectors in terms of quantum efficiency, resolution, and convenience of use.",
 							9.146: " No knowledge of the structure of the CCD is required.",
-                        },
-                    },
+						},
+					},
 				},
 			},
 			9.2: {
 				"sub-topic": "Classification of stars (A-level only)",
 				spec: {
 					9.21: {
-                        "sub-topic": "Classification by luminosity (A-level only)",
-                        spec: {
-                            9.211: "Apparent magnitude, m.",
+						"sub-topic": "Classification by luminosity (A-level only)",
+						spec: {
+							9.211: "Apparent magnitude, m.",
 							9.212: " The Hipparcos scale. ",
 							9.213: "Dimmest visible stars have a magnitude of 6. ",
 							9.214: "Relation between brightness and apparent magnitude. Difference of 1 on magnitude scale is equal to an intensity ratio of 2.51.",
 							9.215: " Brightness is a subjective scale of measurement",
-                        },
-                    },
-                    9.22: {
-                        "sub-topic": "Absolute magnitude, M (A-level only)",
-                        spec: {
-                            9.221: "Parsec and light year.",
+						},
+					},
+					9.22: {
+						"sub-topic": "Absolute magnitude, M (A-level only)",
+						spec: {
+							9.221: "Parsec and light year.",
 							9.222: " Definition of M, relation to m: m – M = 3.9.2.2",
-                        },
-                    },
-                    9.23: {
-                        "sub-topic": "Classification by temperature, black-body radiation (A-level only)",
-                        spec: {
-                            9.231: "Stefan’s law and Wien’s displacement law.",
+						},
+					},
+					9.23: {
+						"sub-topic": "Classification by temperature, black-body radiation (A-level only)",
+						spec: {
+							9.231: "Stefan’s law and Wien’s displacement law.",
 							9.232: " General shape of black-body curves, use of Wien’s displacement law to estimate black-body temperature of sources.",
 							9.233: " Experimental verification is not required.",
 							9.234: "λmaxT = constant = 2.9 × 10−3 m K ",
@@ -940,76 +948,76 @@ export const ALevelPhysicsAQA = {
 							9.236: "Inverse square law, assumptions in its application.",
 							9.237: " Use of Stefan’s law to compare the power output, temperature and size of stars ",
 							9.238: "P = σAT4",
-                        },
-                    },
+						},
+					},
 					9.24: {
-                        "sub-topic": "Principles of the use of stellar spectral classes (A-level only)",
-                        spec: {
-                            9.241: "Description of the main classes: Table 3.9.2.4",
+						"sub-topic": "Principles of the use of stellar spectral classes (A-level only)",
+						spec: {
+							9.241: "Description of the main classes: Table 3.9.2.4",
 							9.242: "Temperature related to absorption spectra limited to Hydrogen Balmer absorption lines: requirement for atoms in an n = 2 state",
-                        },
-                    },
+						},
+					},
 					9.25: {
-                        "sub-topic": "The Hertzsprung-Russell (HR) diagram (A-level only)",
-                        spec: {
-                            9.251: "General shape: main sequence, dwarfs and giants.",
+						"sub-topic": "The Hertzsprung-Russell (HR) diagram (A-level only)",
+						spec: {
+							9.251: "General shape: main sequence, dwarfs and giants.",
 							9.252: " Axis scales range from –10 to +15 (absolute magnitude) and 50 000 K to 2 500 K (temperature) or OBAFGKM (spectral class). ",
 							9.253: "Students should be familiar with the position of the Sun on the HR diagram. ",
 							9.254: "Stellar evolution: path of a star similar to our Sun on the HR diagram from formation to white dwarf.",
-                        },
-                    },
+						},
+					},
 					9.26: {
-                        "sub-topic": "Supernovae, neutron stars and black holes (A-level only)",
-                        spec: {
-                            9.261: "Defining properties: rapid increase in absolute magnitude of supernovae; composition and density of neutron stars; escape velocity > c for black holes. ",
+						"sub-topic": "Supernovae, neutron stars and black holes (A-level only)",
+						spec: {
+							9.261: "Defining properties: rapid increase in absolute magnitude of supernovae; composition and density of neutron stars; escape velocity > c for black holes. ",
 							9.262: "Gamma ray bursts due to the collapse of supergiant stars to form neutron stars or black holes.",
 							9.263: " Comparison of energy output with total energy output of the Sun. ",
 							9.264: "Use of type 1a supernovae as standard candles to determine distances. Controversy concerning accelerating Universe and dark energy.",
 							9.265: " Students should be familiar with the light curve of typical type 1a supernovae. ",
 							9.266: "Supermassive black holes at the centre of galaxies.",
 							9.267: " Calculation of the radius of the event horizon for a black hole, Schwarzschild radius Rs Formula 3.9.2.6",
-                        },
-                    },
+						},
+					},
 				},
 			},
 			9.3: {
 				"sub-topic": "Cosmology (A-level only)",
 				spec: {
 					9.31: {
-                        "sub-topic": "Doppler effect (A-level only)",
-                        spec: {
-                            9.311: "formula 3.9.3.1 for v ≪ c applied to optical and radio frequencies. ",
+						"sub-topic": "Doppler effect (A-level only)",
+						spec: {
+							9.311: "formula 3.9.3.1 for v ≪ c applied to optical and radio frequencies. ",
 							9.312: "Calculations on binary stars viewed in the plane of orbit. ",
 							9.313: "Galaxies and quasars.",
-                        },
-                    },
-                    9.32: {
-                        "sub-topic": "Hubble's law (A-level only)",
-                        spec: {
-                            9.321: "Red shift v = Hd ",
+						},
+					},
+					9.32: {
+						"sub-topic": "Hubble's law (A-level only)",
+						spec: {
+							9.321: "Red shift v = Hd ",
 							9.322: "Simple interpretation as expansion of universe; estimation of age of universe, assuming H is constant.",
 							9.323: " Qualitative treatment of Big Bang theory including evidence from cosmological microwave background radiation, and relative abundance of hydrogen and helium. ",
 
-                        },
-                    },
-                    9.33: {
-                        "sub-topic": "Quasars (A-level only)",
-                        spec: {
-                            9.331: "Quasars as the most distant measurable objects. ",
+						},
+					},
+					9.33: {
+						"sub-topic": "Quasars (A-level only)",
+						spec: {
+							9.331: "Quasars as the most distant measurable objects. ",
 							9.332: "Discovery of quasars as bright radio sources.",
 							9.333: " Quasars show large optical red shifts; estimation involving distance and power output. ",
 							9.334: "Formation of quasars from active supermassive black holes.",
-                        },
-                    },
+						},
+					},
 					9.34: {
-                        "sub-topic": "Detection of exoplanets (A-level only)",
-                        spec: {
-                            9.341: "Difficulties in the direct detection of exoplanets.",
+						"sub-topic": "Detection of exoplanets (A-level only)",
+						spec: {
+							9.341: "Difficulties in the direct detection of exoplanets.",
 							9.342: " Detection techniques will be limited to variation in Doppler shift (radial velocity method) and the transit method. ",
 							9.343: "Typical light curve.",
-                        },
-                    },
-					
+						},
+					},
+
 				},
 			},
 		},
@@ -1022,175 +1030,175 @@ export const ALevelPhysicsAQA = {
 				"sub-topic": "",
 				spec: {
 					10.11: {
-                        "sub-topic": "Physics of vision (A-level only)",
-                        spec: {
-                            10.111: "The eye as an optical refracting system, including ray diagrams of image formation. ",
+						"sub-topic": "Physics of vision (A-level only)",
+						spec: {
+							10.111: "The eye as an optical refracting system, including ray diagrams of image formation. ",
 							10.112: "Sensitivity of the eye; spectral response as a photodetector.",
 							10.113: " Spatial resolution of the eye; explanation in terms of the behaviour of rods and cones.",
-                        },
-                    },
-                    10.12: {
-                        "sub-topic": "Defects of vision and their correction using lenses (A-level only)",
-                        spec: {
-                            10.121: "Properties of converging and diverging lenses; principal focus, focal length and power,",
+						},
+					},
+					10.12: {
+						"sub-topic": "Defects of vision and their correction using lenses (A-level only)",
+						spec: {
+							10.121: "Properties of converging and diverging lenses; principal focus, focal length and power,",
 							10.122: "",
 							10.123: " Myopia, hypermetropia, astigmatism. ",
 							10.124: "Ray diagrams and calculations of powers (in dioptres) of correcting lenses for myopia and hypermetropia.",
 							10.125: " The format of prescriptions for astigmatism.",
-                        },
-                    },
+						},
+					},
 				},
 			},
 			10.2: {
 				"sub-topic": "Physics of the ear (A-level only)",
 				spec: {
 					10.21: {
-                        "sub-topic": " Ear as a sound detection system (A-level only)",
-                        spec: {
-                            10.211: "Simple structure of the ear, transmission processes",
-                        },
-                    },
-                    10.22: {
-                        "sub-topic": "Sensitivity and frequency response (A-level only)",
-                        spec: {
-                            10.221: "Production and interpretation of equal loudness curves. ",
+						"sub-topic": " Ear as a sound detection system (A-level only)",
+						spec: {
+							10.211: "Simple structure of the ear, transmission processes",
+						},
+					},
+					10.22: {
+						"sub-topic": "Sensitivity and frequency response (A-level only)",
+						spec: {
+							10.221: "Production and interpretation of equal loudness curves. ",
 							10.222: "Human perception of relative intensity levels and the need for a logarithmic scale to reflect this.",
 							10.223: " Definition of intensity.",
 							10.224: " Intensity level = 10 log I/ I0 where the threshold of hearing I0 = 1.0 × 10−12 W m −2 ",
 							10.225: "Measurement of sound intensity levels and the use of dB and dBA scales; relative intensity levels of sounds.",
-                        },
-                    },
+						},
+					},
 					10.23: {
-                        "sub-topic": "Defects of hearing (A-level only)",
-                        spec: {
-                            10.231: "The effect on equal loudness curves and the changes experienced in terms of hearing loss due to injury resulting from exposure to excessive noise or deterioration with age (excluding physiological changes).",
-                        },
-                    },
+						"sub-topic": "Defects of hearing (A-level only)",
+						spec: {
+							10.231: "The effect on equal loudness curves and the changes experienced in terms of hearing loss due to injury resulting from exposure to excessive noise or deterioration with age (excluding physiological changes).",
+						},
+					},
 				},
 			},
 			10.3: {
 				"sub-topic": "Biological measurement (A-level only)",
 				spec: {
 					10.31: {
-                        "sub-topic": "Simple ECG machines and the normal ECG waveform (A-level only)",
-                        spec: {
-                            10.311: "Principles of operation for obtaining the ECG waveform; explanation of the characteristic shape of a normal ECG waveform.",
-                        },
-                    },
-                    
+						"sub-topic": "Simple ECG machines and the normal ECG waveform (A-level only)",
+						spec: {
+							10.311: "Principles of operation for obtaining the ECG waveform; explanation of the characteristic shape of a normal ECG waveform.",
+						},
+					},
+
 				},
 			},
 			10.4: {
 				"sub-topic": "Non-ionising imaging (A-level only)",
 				spec: {
 					10.41: {
-                        "sub-topic": "Ultrasound imaging (A-level only)",
-                        spec: {
-                            10.411: "Reflection and transmission characteristics of sound waves at tissue boundaries, acoustic impedance, Z, and attenuation.",
+						"sub-topic": "Ultrasound imaging (A-level only)",
+						spec: {
+							10.411: "Reflection and transmission characteristics of sound waves at tissue boundaries, acoustic impedance, Z, and attenuation.",
 							10.412: " Advantages and disadvantages of ultrasound imaging in comparison with alternatives including safety issues and resolution. ",
 							10.413: "Piezoelectric devices ",
 							10.414: "Principles of generation and detection of ultrasound pulses. ",
 							10.415: "A-scans and B-scans. ",
 							10.416: "Examples of applications. ",
 							10.417: "Use of the equations 3.10.4.1",
-							
-                        },
-                    },
-                    10.42: {
-                        "sub-topic": "Fibre optics and endoscopy (A-level only)",
-                        spec: {
-                            10.421: "Properties of fibre optics and applications in medical physics; including total internal reflection at the core–cladding interface.",
+
+						},
+					},
+					10.42: {
+						"sub-topic": "Fibre optics and endoscopy (A-level only)",
+						spec: {
+							10.421: "Properties of fibre optics and applications in medical physics; including total internal reflection at the core–cladding interface.",
 							10.422: " Physical principles of the optical system of a flexible endoscope; the use of coherent and non-coherent fibre bundles; examples of use for internal imaging and related advantages",
-                        },
-                    },
+						},
+					},
 					10.43: {
-                        "sub-topic": "Magnetic resonance (MR) scanner (A-level only)",
-                        spec: {
-                            10.431: "Basic principles of MR scanner;\n • cross-section of patient scanned using magnetic fields\n • protons initially aligned with spins parallel\n • spinning hydrogen nuclei (protons) precess about the magnetic field lines of a superconducting magnet\n • 'gradient' field coils used to scan cross-section\n • short radio frequency (RF) pulses cause excitation and change of spin state in successive small regions\n • protons excited during the scan emit RF signals as they de-excite\n • RF signals detected and the resulting signals are processed by a computer to produce a visual image.",
+						"sub-topic": "Magnetic resonance (MR) scanner (A-level only)",
+						spec: {
+							10.431: "Basic principles of MR scanner;\n • cross-section of patient scanned using magnetic fields\n • protons initially aligned with spins parallel\n • spinning hydrogen nuclei (protons) precess about the magnetic field lines of a superconducting magnet\n • 'gradient' field coils used to scan cross-section\n • short radio frequency (RF) pulses cause excitation and change of spin state in successive small regions\n • protons excited during the scan emit RF signals as they de-excite\n • RF signals detected and the resulting signals are processed by a computer to produce a visual image.",
 							10.432: " Students will not be asked about the production of magnetic fields used in an MR scanner, or about de-excitation relaxation times",
-                        },
-                    },
+						},
+					},
 				},
 			},
 			10.5: {
 				"sub-topic": "X-ray imaging (A-level only)",
 				spec: {
 					10.51: {
-                        "sub-topic": "The physics of diagnostic X-rays(A-level only)",
-                        spec: {
-                            10.511: "Physical principles of the production of X-rays; maximum photon energy, energy spectrum; continuous spectrum and characteristic spectrum. ",
+						"sub-topic": "The physics of diagnostic X-rays(A-level only)",
+						spec: {
+							10.511: "Physical principles of the production of X-rays; maximum photon energy, energy spectrum; continuous spectrum and characteristic spectrum. ",
 							10.512: "Rotating-anode X-ray tube; methods of controlling the beam intensity, the photon energy, the image sharpness and contrast, and the patient dose. ",
-                        },
-                    },
-                    10.52: {
-                        "sub-topic": "Image detection and enhancement (A-level only)",
-                        spec: {
-                            10.521: "Flat panel (FTP) detector including X-ray scintillator, photodiode pixels, electronic scanning.",
+						},
+					},
+					10.52: {
+						"sub-topic": "Image detection and enhancement (A-level only)",
+						spec: {
+							10.521: "Flat panel (FTP) detector including X-ray scintillator, photodiode pixels, electronic scanning.",
 							10.522: " Advantages of FTP detector compared with photographic detection.",
 							10.523: " Contrast enhancement; use of X-ray opaque material as illustrated by the barium meal technique. ",
 							10.524: "Photographic detection with intensifying screen and fluoroscopic image intensification; reasons for using these.",
-                        },
-                    },
+						},
+					},
 					10.53: {
-                        "sub-topic": "Absorption of X-rays (A-level only)",
-                        spec: {
-                            10.531: "Exponential attenuation. ",
+						"sub-topic": "Absorption of X-rays (A-level only)",
+						spec: {
+							10.531: "Exponential attenuation. ",
 							10.532: "Linear coefficient μ, mass attenuation coefficient μm, half-value thickness ",
 							10.533: "formula 3.10.5.3",
 							10.534: "Differential tissue absorption of X-rays excluding details of the absorption processes",
-                        },
-                    },
+						},
+					},
 					10.54: {
-                        "sub-topic": "CT scanner (A-level only)",
-                        spec: {
-                            10.541: " Basic principles of CT scanner:\n • movement of X-ray tube\n • narrow, monochromatic X-ray beam\n • array of detectors\n • computer used to process the signals and produce a visual image.",
+						"sub-topic": "CT scanner (A-level only)",
+						spec: {
+							10.541: " Basic principles of CT scanner:\n • movement of X-ray tube\n • narrow, monochromatic X-ray beam\n • array of detectors\n • computer used to process the signals and produce a visual image.",
 							10.542: " Comparisons will be limited to advantages and disadvantages of image resolution, cost and safety issues. Students will not be asked about the construction or operation of the detectors.",
-                        },
-                    },
+						},
+					},
 				},
 			},
 			10.6: {
 				"sub-topic": "Radionuclide imaging and therapy (A-level only)",
 				spec: {
 					10.61: {
-                        "sub-topic": "Imaging techniques (A-level only)",
-                        spec: {
-                            10.611: "Use of a gamma-emitting radioisotope as a tracer; technetium-99m, iodine-131 and indium-111 and their relevant properties. ",
+						"sub-topic": "Imaging techniques (A-level only)",
+						spec: {
+							10.611: "Use of a gamma-emitting radioisotope as a tracer; technetium-99m, iodine-131 and indium-111 and their relevant properties. ",
 							10.612: "The properties should include the radiation emitted, the half-life, the energy of the gamma radiation, the ability for it to be labelled with a compound with an affinity for a particular organ.",
 							10.613: "The Molybdenum-Technetium generator, its basic use and importance. ",
 							10.614: " PET scans. ",
-                        },
-                    },
-                    10.62: {
-                        "sub-topic": "Half-life (A-level only)",
-                        spec: {
-                            10.621: "Physical, biological and effective half-lives; formula 3.10.6.2; definitions of each term.",
-                        },
-                    },
+						},
+					},
+					10.62: {
+						"sub-topic": "Half-life (A-level only)",
+						spec: {
+							10.621: "Physical, biological and effective half-lives; formula 3.10.6.2; definitions of each term.",
+						},
+					},
 					10.63: {
-                        "sub-topic": "Gamma camera (A-level only)",
-                        spec: {
-                            10.631: "Basic structure and workings of a photomultiplier tube and gamma camera",
-                        },
-                    },
+						"sub-topic": "Gamma camera (A-level only)",
+						spec: {
+							10.631: "Basic structure and workings of a photomultiplier tube and gamma camera",
+						},
+					},
 					10.64: {
-                        "sub-topic": "Use of high-energy X-rays (A-level only)",
-                        spec: {
-                            10.641: "External treatment using high-energy X-rays. Methods used to limit exposure to healthy cells.",
-                        },
-                    },
+						"sub-topic": "Use of high-energy X-rays (A-level only)",
+						spec: {
+							10.641: "External treatment using high-energy X-rays. Methods used to limit exposure to healthy cells.",
+						},
+					},
 					10.65: {
-                        "sub-topic": "Use of radioactive implants (A-level only)",
-                        spec: {
-                            10.651: "Internal treatment using beta emitting implants.",
-                        },
-                    },
+						"sub-topic": "Use of radioactive implants (A-level only)",
+						spec: {
+							10.651: "Internal treatment using beta emitting implants.",
+						},
+					},
 					10.66: {
-                        "sub-topic": "Imaging comparisons (A-level only)",
-                        spec: {
-                            10.661: " Students will be required to make comparisons between imaging techniques. Questions will be limited to consideration of image resolution, convenience and safety issues.",
-                        },
-                    },
+						"sub-topic": "Imaging comparisons (A-level only)",
+						spec: {
+							10.661: " Students will be required to make comparisons between imaging techniques. Questions will be limited to consideration of image resolution, convenience and safety issues.",
+						},
+					},
 				},
 			},
 		},
@@ -1203,91 +1211,91 @@ export const ALevelPhysicsAQA = {
 				"sub-topic": "",
 				spec: {
 					11.11: {
-                        "sub-topic": "Concept of moment of inertia (A-level only)",
-                        spec: {
-                            11.111: "formula 3.11.1.1 for an extended object.",
+						"sub-topic": "Concept of moment of inertia (A-level only)",
+						spec: {
+							11.111: "formula 3.11.1.1 for an extended object.",
 							11.112: " Qualitative knowledge of the factors that affect the moment of inertia of a rotating object.",
 							11.113: " Expressions for moment of inertia will be given where necessary.",
-                        },
-                    },
-                    11.12: {
-                        "sub-topic": "Rotational kinetic energy (A-level only)",
-                        spec: {
-                            11.121: "formula 3.11.1.2",
+						},
+					},
+					11.12: {
+						"sub-topic": "Rotational kinetic energy (A-level only)",
+						spec: {
+							11.121: "formula 3.11.1.2",
 							11.122: "Factors affecting the energy storage capacity of a flywheel.",
 							11.123: " Use of flywheels in machines. ",
 							11.124: "Use of flywheels for smoothing torque and speed, and for storing energy in vehicles, and in machines used for production processes.",
-                        },
-                    },
+						},
+					},
 					11.13: {
-                        "sub-topic": "Rotational motion (A-level only)",
-                        spec: {
-                            11.131: "Angular displacement, angular speed, angular velocity, angular acceleration, formula 3.11.1.3 ",
+						"sub-topic": "Rotational motion (A-level only)",
+						spec: {
+							11.131: "Angular displacement, angular speed, angular velocity, angular acceleration, formula 3.11.1.3 ",
 							11.132: "Representation by graphical methods of uniform and non-uniform angular acceleration.",
 							11.133: " Equations for uniform angular acceleration; formula 3.11.1.3 ",
 							11.134: "Students should be aware of the analogy between rotational and translational dynamics.",
-                        },
-                    },
+						},
+					},
 					11.14: {
-                        "sub-topic": "Torque and angular acceleration (A-level only)",
-                        spec: {
-                            11.141: "T = Fr",
+						"sub-topic": "Torque and angular acceleration (A-level only)",
+						spec: {
+							11.141: "T = Fr",
 							11.142: " T = Iα ",
-                        },
-                    },
+						},
+					},
 					11.15: {
-                        "sub-topic": "Angular momentum (A-level only)",
-                        spec: {
-                            11.151: "angular momentum = Iω ",
+						"sub-topic": "Angular momentum (A-level only)",
+						spec: {
+							11.151: "angular momentum = Iω ",
 							11.152: "Conservation of angular momentum. ",
 							11.153: "Angular impulse = change in angular momentum; T ∆ t = ∆ Iω where T is constant.",
 							11.154: " Applications may include examples from sport.",
-                        },
-                    },
+						},
+					},
 					11.16: {
-                        "sub-topic": "Work and power (A-level only)",
-                        spec: {
-                            11.161: "W = Tθ; P = Tω ",
+						"sub-topic": "Work and power (A-level only)",
+						spec: {
+							11.161: "W = Tθ; P = Tω ",
 							11.162: "Awareness that frictional torque has to be taken into account in rotating machinery. ",
-                        },
-                    },
+						},
+					},
 				},
 			},
 			11.2: {
 				"sub-topic": "Thermodynamics and engines (A-level only)",
 				spec: {
 					11.21: {
-                        "sub-topic": "First law of thermodynamics (A-level only)",
-                        spec: {
-                            11.211: "Quantitative treatment of first law of thermodynamics, Q = ∆U + W",
+						"sub-topic": "First law of thermodynamics (A-level only)",
+						spec: {
+							11.211: "Quantitative treatment of first law of thermodynamics, Q = ∆U + W",
 							11.212: " where Q is energy transferred to the system by heating, ∆U is increase in internal energy and W is work done by the system. ",
 							11.213: "Applications of first law of thermodynamics.",
-                        },
-                    },
-                    11.22: {
-                        "sub-topic": "Non-flow processes (A-level only)",
-                        spec: {
-                            11.221: "Isothermal, adiabatic, constant pressure and constant volume changes.",
+						},
+					},
+					11.22: {
+						"sub-topic": "Non-flow processes (A-level only)",
+						spec: {
+							11.221: "Isothermal, adiabatic, constant pressure and constant volume changes.",
 							11.222: " pV = nRT",
 							11.223: " adiabatic change : pVγ = constant",
 							11.224: " isothermal change : pV = constant",
 							11.225: " at constant pressure W = pΔV",
 							11.226: " Application of first law of thermodynamics to the above processes.",
-                        },
-                    },
+						},
+					},
 					11.23: {
-                        "sub-topic": "The p–V diagram (A-level only)",
-                        spec: {
-                            11.231: "Representation of processes on p–V diagram.",
+						"sub-topic": "The p–V diagram (A-level only)",
+						spec: {
+							11.231: "Representation of processes on p–V diagram.",
 							11.232: " Estimation of work done in terms of area below the graph. ",
 							11.233: "Extension to cyclic processes: work done per cycle = area of loop ",
 							11.234: "Expressions for work done are not required except for the constant pressure case, W = pΔV",
-                        },
-                    },
+						},
+					},
 					11.24: {
-                        "sub-topic": "Engine cycles (A-level only)",
-                        spec: {
-                            11.241: "Understanding of a four-stroke petrol engine cycle and a diesel engine cycle, and of the corresponding indicator diagrams. ",
+						"sub-topic": "Engine cycles (A-level only)",
+						spec: {
+							11.241: "Understanding of a four-stroke petrol engine cycle and a diesel engine cycle, and of the corresponding indicator diagrams. ",
 							11.242: "Comparison with the theoretical diagrams for these cycles; use of indicator diagrams for predicting and measuring power and efficiency",
 							11.243: "input power = calorific value × fuel flow rate ",
 							11.244: " Indicated power as area of p−V loop × no. of cycles per second × no. of cylinders",
@@ -1299,29 +1307,29 @@ export const ALevelPhysicsAQA = {
 							11.2410: "Mechanical efficiency = brake power /indicated power",
 							11.2411: " A knowledge of engine constructional details is not required. ",
 							11.2412: "Questions may be set on other cycles, but they will be interpretative and all essential information will be given.",
-						
-                        },
-                    },
+
+						},
+					},
 					11.25: {
-                        "sub-topic": "Second Law and engines (A-level only)",
-                        spec: {
-                            11.251: "Impossibility of an engine working only by the First Law.",
+						"sub-topic": "Second Law and engines (A-level only)",
+						spec: {
+							11.251: "Impossibility of an engine working only by the First Law.",
 							11.252: " Second Law of Thermodynamics expressed as the need for a heat engine to operate between a source and a sink.",
 							11.253: "formula 3.11.2.5",
 							11.254: "diagram 3.11.2.5",
 							11.255: "Reasons for the lower efficiencies of practical engines.",
 							11.256: " Maximising use of W and QH for example in combined heat and power schemes.",
-                        },
-                    },
+						},
+					},
 					11.26: {
-                        "sub-topic": "Reversed heat engines (A-level only)",
-                        spec: {
-                            11.261: "Basic principles and uses of heat pumps and refrigerators. ",
+						"sub-topic": "Reversed heat engines (A-level only)",
+						spec: {
+							11.261: "Basic principles and uses of heat pumps and refrigerators. ",
 							11.262: "A knowledge of practical heat pumps or refrigerator cycles and devices is not required",
 							11.263: "diagram 3.11.2.6",
 							11.264: "formula 3.11.2.6",
-                        },
-                    },
+						},
+					},
 				},
 			},
 		},
@@ -1334,135 +1342,135 @@ export const ALevelPhysicsAQA = {
 				"sub-topic": "The discovery of the electron (A-level only)",
 				spec: {
 					12.11: {
-                        "sub-topic": "Cathode rays (A-level only)",
-                        spec: {
-                            12.111: "Production of cathode rays in a discharge tube",
-                        },
-                    },
-                    12.12: {
-                        "sub-topic": "Thermionic emission of electrons (A-level only)",
-                        spec: {
-                            12.121: "The principle of thermionic emission.",
+						"sub-topic": "Cathode rays (A-level only)",
+						spec: {
+							12.111: "Production of cathode rays in a discharge tube",
+						},
+					},
+					12.12: {
+						"sub-topic": "Thermionic emission of electrons (A-level only)",
+						spec: {
+							12.121: "The principle of thermionic emission.",
 							12.122: " Work done on an electron accelerated through a pd formula 3.12.1.2",
-                        },
-                    },
+						},
+					},
 					12.13: {
-                        "sub-topic": "Specific charge of the electron (A-level only)",
-                        spec: {
-                            12.131: "Determination of the specific charge of an electron, e/me , by any one method.",
+						"sub-topic": "Specific charge of the electron (A-level only)",
+						spec: {
+							12.131: "Determination of the specific charge of an electron, e/me , by any one method.",
 							12.132: "Significance of Thomson’s determination of e/me ",
 							12.133: "Comparison with the specific charge of the hydrogen ion.",
-                        },
-                    },
+						},
+					},
 					12.14: {
-                        "sub-topic": "Principle of Millikan’s determination of the electronic charge, e (A-level only)",
-                        spec: {
-                            12.141: "Condition for holding a charged oil droplet, of charge Q, stationary between oppositely charged parallel plates.",
+						"sub-topic": "Principle of Millikan’s determination of the electronic charge, e (A-level only)",
+						spec: {
+							12.141: "Condition for holding a charged oil droplet, of charge Q, stationary between oppositely charged parallel plates.",
 							12.142: " QV/ d = mg",
 							12.143: "Motion of a falling oil droplet with and without an electric field; terminal speed to determine the mass and the charge of the droplet. ",
 							12.144: "Stokes’ Law for the viscous force on an oil droplet used to calculate the droplet radius.",
 							12.145: " F = 6πηrv ",
 							12.146: "Significance of Millikan’s results. ",
 							12.147: "Quantisation of electric charge.",
-                        },
-                    },
+						},
+					},
 				},
 			},
 			12.2: {
 				"sub-topic": "Wave-particle duality (A-level only)",
 				spec: {
 					12.21: {
-                        "sub-topic": "Newton’s corpuscular theory of light (A-level only)",
-                        spec: {
-                            12.211: "Comparison with Huygens’ wave theory in general terms. ",
+						"sub-topic": "Newton’s corpuscular theory of light (A-level only)",
+						spec: {
+							12.211: "Comparison with Huygens’ wave theory in general terms. ",
 							12.212: "The reasons why Newton’s theory was preferred.",
-                        },
-                    },
-                    12.22: {
-                        "sub-topic": "Significance of Young’s double slits experiment (A-level only)",
-                        spec: {
-                            12.221: " Explanation for fringes in general terms, no calculations are expected. ",
+						},
+					},
+					12.22: {
+						"sub-topic": "Significance of Young’s double slits experiment (A-level only)",
+						spec: {
+							12.221: " Explanation for fringes in general terms, no calculations are expected. ",
 							12.222: "Delayed acceptance of Huygens’ wave theory of light.",
-                        },
-                    },
+						},
+					},
 					12.23: {
-                        "sub-topic": "Electromagnetic waves (A-level only)",
-                        spec: {
-                            12.231: "Nature of electromagnetic waves.",
+						"sub-topic": "Electromagnetic waves (A-level only)",
+						spec: {
+							12.231: "Nature of electromagnetic waves.",
 							12.232: " Maxwell’s formula for the speed of electromagnetic waves in a vacuum c = 1 μ0ε0 where μ0 is the permeability of free space and ε0 is the permittivity of free space. ",
 							12.233: "Students should appreciate that ε0 relates to the electric field strength due to a charged object in free space and μ0 relates to the magnetic flux density due to a current-carrying wire in free space.",
 							12.234: " Hertz’s discovery of radio waves including measurements of the speed of radio waves.",
 							12.235: " Fizeau’s determination of the speed of light and its implications.",
-                        },
-                    },
-                    12.24: {
-                        "sub-topic": "The discovery of photoelectricity (A-level only)",
-                        spec: {
-                            12.241: "The ultraviolet catastrophe and black-body radiation. ",
+						},
+					},
+					12.24: {
+						"sub-topic": "The discovery of photoelectricity (A-level only)",
+						spec: {
+							12.241: "The ultraviolet catastrophe and black-body radiation. ",
 							12.242: "Planck’s interpretation in terms of quanta.",
 							12.243: " The failure of classical wave theory to explain observations on photoelectricity.",
 							12.244: "Einstein’s explanation of photoelectricity and its significance in terms of the nature of electromagnetic radiation.",
-                        },
-                    },
+						},
+					},
 					12.25: {
-                        "sub-topic": "Wave–particle duality (A-level only)",
-                        spec: {
-                            12.251: "de Broglie’s hypothesis: p = h/ λ ; ",
+						"sub-topic": "Wave–particle duality (A-level only)",
+						spec: {
+							12.251: "de Broglie’s hypothesis: p = h/ λ ; ",
 							12.252: "formula 3.12.2.5",
 							12.253: "Low-energy electron diffraction experiments; qualitative explanation of the effect of a change of electron speed on the diffraction pattern.",
-                        },
-                    },
-                    12.26: {
-                        "sub-topic": "Electron microscopes (A-level only)",
-                        spec: {
-                            12.261: "Estimate of anode voltage needed to produce wavelengths of the order of the size of the atom. ",
+						},
+					},
+					12.26: {
+						"sub-topic": "Electron microscopes (A-level only)",
+						spec: {
+							12.261: "Estimate of anode voltage needed to produce wavelengths of the order of the size of the atom. ",
 							12.262: "Principle of operation of the transmission electron microscope (TEM). Principle of operation of the scanning tunnelling microscope (STM).",
 							12.263: "Principle of operation of the transmission electron microscope (TEM). Principle of operation of the scanning tunnelling microscope (STM).",
-                        },
-                    },
+						},
+					},
 				},
 			},
 			12.3: {
 				"sub-topic": "Special relativity (A-level only)",
 				spec: {
 					12.31: {
-                        "sub-topic": "The Michelson-Morley experiment (A-level only)",
-                        spec: {
-                            12.311: "Principle of the Michelson-Morley interferometer. ",
+						"sub-topic": "The Michelson-Morley experiment (A-level only)",
+						spec: {
+							12.311: "Principle of the Michelson-Morley interferometer. ",
 							12.312: "Outline of the experiment as a means of detecting absolute motion.",
 							12.313: " Significance of the failure to detect absolute motion.",
 							12.314: " The invariance of the speed of light",
-                        },
-                    },
-                    12.32: {
-                        "sub-topic": "Einstein’s theory of special relativity (A-level only)",
-                        spec: {
-                            12.321: " The concept of an inertial frame of reference.",
+						},
+					},
+					12.32: {
+						"sub-topic": "Einstein’s theory of special relativity (A-level only)",
+						spec: {
+							12.321: " The concept of an inertial frame of reference.",
 							12.322: " The two postulates of Einstein’s theory of special relativity:\n 1. physical laws have the same form in all inertial frames\n 2. the speed of light in free space is invariant.",
-                        },
-                    },
+						},
+					},
 					12.33: {
-                        "sub-topic": "Time dilation (A-level only)",
-                        spec: {
-                            12.331: "Proper time and time dilation as a consequence of special relativity.",
+						"sub-topic": "Time dilation (A-level only)",
+						spec: {
+							12.331: "Proper time and time dilation as a consequence of special relativity.",
 							12.332: " Time dilation: formula 3.12.3.3",
 							12.333: " Evidence for time dilation from muon decay. ",
-                        },
-                    },
-                    12.34: {
-                        "sub-topic": "Length contraction (A-level only)",
-                        spec: {
-                            12.341: "Length of an object having a speed v formula 3.12.3.4",
-                        },
-                    },
+						},
+					},
+					12.34: {
+						"sub-topic": "Length contraction (A-level only)",
+						spec: {
+							12.341: "Length of an object having a speed v formula 3.12.3.4",
+						},
+					},
 					12.35: {
-                        "sub-topic": "Mass and energy (A-level only)",
-                        spec: {
-                            12.351: "Equivalence of mass and energy,formula 3.12.3.5 ",
+						"sub-topic": "Mass and energy (A-level only)",
+						spec: {
+							12.351: "Equivalence of mass and energy,formula 3.12.3.5 ",
 							12.352: "Graphs of variation of mass and kinetic energy with speed. ",
 							12.353: "Bertozzi’s experiment as direct evidence for the variation of kinetic energy with speed.",
-                        },
-                    },
+						},
+					},
 				},
 			},
 		},
@@ -1475,65 +1483,65 @@ export const ALevelPhysicsAQA = {
 				"sub-topic": "Discrete semiconductor devices (A-level only)",
 				spec: {
 					13.11: {
-                        "sub-topic": "MOSFET (metal-oxide semiconducting field-effect transistor) (A-level only)",
-                        spec: {
-                            13.111: "Simplified structure, behaviour and characteristics. ",
+						"sub-topic": "MOSFET (metal-oxide semiconducting field-effect transistor) (A-level only)",
+						spec: {
+							13.111: "Simplified structure, behaviour and characteristics. ",
 							13.112: "Drain, source and gate.",
 							13.113: " VDS, VGS, IDSS, and Vth",
 							13.114: " Use as a switch, use as a device with a very high input resistance.",
 							13.115: " Use in N-channel, enhancement mode only is required. ",
-                        },
-                    },
-                    13.12: {
-                        "sub-topic": "Zener diode (A-level only)",
-                        spec: {
-                            13.121: "Characteristic curve showing zener breakdown voltage and typical minimum operating current.",
+						},
+					},
+					13.12: {
+						"sub-topic": "Zener diode (A-level only)",
+						spec: {
+							13.121: "Characteristic curve showing zener breakdown voltage and typical minimum operating current.",
 							13.122: " Anode and cathode.",
 							13.123: " Use with a resistor as a constant voltage source.",
 							13.124: "Use to provide a reference voltage. ",
 							13.125: "Use as a stabiliser is not required.",
-                        },
-                    },
+						},
+					},
 					13.13: {
-                        "sub-topic": "Photodiode (A-level only)",
-                        spec: {
-                            13.131: "Characteristic curves and spectral response curves.",
+						"sub-topic": "Photodiode (A-level only)",
+						spec: {
+							13.131: "Characteristic curves and spectral response curves.",
 							13.132: " Use in photo-conductive mode as a detector in optical systems. ",
 							13.133: "Use with scintillator to detect atomic particles. ",
-                        },
-                    },
-                    13.14: {
-                        "sub-topic": "Hall effect sensor (A-level only)",
-                        spec: {
-                            13.141: "Use as magnetic field sensor to monitor attitude. ",
+						},
+					},
+					13.14: {
+						"sub-topic": "Hall effect sensor (A-level only)",
+						spec: {
+							13.141: "Use as magnetic field sensor to monitor attitude. ",
 							13.142: "Use in tachometer.",
 							13.143: " Principles of operation are not required.",
-                        },
-                    },
+						},
+					},
 				},
 			},
 			13.2: {
 				"sub-topic": "Analogue and digital signals (A-level only)",
 				spec: {
 					13.21: {
-                        "sub-topic": "Difference between analogue and digital signals (A-level only)",
-                        spec: {
-                            13.211: "Bits, bytes. ",
+						"sub-topic": "Difference between analogue and digital signals (A-level only)",
+						spec: {
+							13.211: "Bits, bytes. ",
 							13.212: "Analogue-to-digital conversion:\n • sampling audio signals for transmission in digital form\n • conversion of analogue signals into digital data using two voltage levels\n • quantisation\n • sampling rate\n • effect of sampling rate and number of bits per sample on quality of conversion\n • advantages and disadvantages of digital sampling\n • process of recovery of original data from noisy signal\n • effect of noise in communication systems. ",
 							13.213: "Pulse code modulation. ",
 							13.214: "Students should appreciate the use of a variety of sensors to collect analogue data. ",
 							13.215: "The ability to carry out binary arithmetic is not required. Knowledge of binary numbers 1 to 10 is adequate.",
-                        },
-                    },
+						},
+					},
 				},
 			},
 			13.3: {
 				"sub-topic": "Analogue signal processing (A-level only)",
 				spec: {
 					13.31: {
-                        "sub-topic": "LC resonance filters (A-level only)",
-                        spec: {
-                            13.311: "Resonant frequency, f formula 3.13.3.1 ",
+						"sub-topic": "LC resonance filters (A-level only)",
+						spec: {
+							13.311: "Resonant frequency, f formula 3.13.3.1 ",
 							13.312: "Only parallel resonance arrangements are required.",
 							13.313: " Analogy between LC circuit and mass–spring system. ",
 							13.314: "Inductance as mass analogy.",
@@ -1543,123 +1551,123 @@ export const ALevelPhysicsAQA = {
 							13.318: "The response curve for current is not required.",
 							13.319: " Q factor,  formula 3.13.3.1",
 							13.3110: "f B is the bandwidth of the filter at the 50% energy points",
-                        },
-                    },
+						},
+					},
 					13.32: {
-                        "sub-topic": "The ideal operational amplifier (A-level only)",
-                        spec: {
-                            13.321: "Operation and characteristics of an ideal operational amplifier:\n • power supply and signal connections\n • infinite open-loop gain\n • infinite input resistance.",
+						"sub-topic": "The ideal operational amplifier (A-level only)",
+						spec: {
+							13.321: "Operation and characteristics of an ideal operational amplifier:\n • power supply and signal connections\n • infinite open-loop gain\n • infinite input resistance.",
 							13.322: " Open-loop transfer function for a real operational amplifier, Vout = AOL V+ − V− ",
 							13.323: "Use as a comparator. ",
 							13.324: "The operational amplifier should be treated as an important system building block.",
-                        },
-                    },
+						},
+					},
 				},
 			},
 			13.4: {
 				"sub-topic": "Operational amplifier in:",
 				spec: {
 					13.41: {
-                        "sub-topic": "inverting amplifier configuration (A-level only)",
-                        spec: {
-                            13.411: "Derivation of formula 3.13.4.1",
+						"sub-topic": "inverting amplifier configuration (A-level only)",
+						spec: {
+							13.411: "Derivation of formula 3.13.4.1",
 							13.412: "Meaning of virtual earth, virtual-earth analysis.",
-                        },
-                    },
+						},
+					},
 					13.42: {
-                        "sub-topic": "non-inverting amplifier configuration (A-level only)",
-                        spec: {
+						"sub-topic": "non-inverting amplifier configuration (A-level only)",
+						spec: {
 							13.421: "formula 3.13.4.2",
-                            13.422: "Derivation is not required",
-                        },
-                    },
+							13.422: "Derivation is not required",
+						},
+					},
 					13.43: {
-                        "sub-topic": "summing amplifier configuration (A-level only)",
-                        spec: {
-                            13.431: "formula 3.13.4.3",
+						"sub-topic": "summing amplifier configuration (A-level only)",
+						spec: {
+							13.431: "formula 3.13.4.3",
 							13.432: "Difference amplifier configuration.",
 							13.433: "Derivation is not required.",
 							13.434: "formula 3.13.4.3",
 							13.435: "Derivation is not required.",
-                        },
-                    },
+						},
+					},
 					13.44: {
-                        "sub-topic": "Real operational amplifiers (A-level only)",
-                        spec: {
-                            13.441: "Limitations of real operational amplifiers.",
+						"sub-topic": "Real operational amplifiers (A-level only)",
+						spec: {
+							13.441: "Limitations of real operational amplifiers.",
 							13.442: "Frequency response curve.",
 							13.443: "gain × bandwidth = constant for a given device.",
-                        },
-                    },
+						},
+					},
 				},
 			},
 			13.5: {
 				"sub-topic": "Digital signal processing (A-level only)",
 				spec: {
 					13.51: {
-                        "sub-topic": "Combinational logic (A-level only)",
-                        spec: {
-                            13.511: "Use of Boolean algebra related to truth tables and logic gates.",
+						"sub-topic": "Combinational logic (A-level only)",
+						spec: {
+							13.511: "Use of Boolean algebra related to truth tables and logic gates.",
 							13.512: " A − = not A",
 							13.513: " A ∙ B = A and B",
 							13.514: "A + B = A or B ",
 							13.515: "Identification and use of AND, NAND, OR, NOR, NOT and EOR gates in combination in logic circuits. ",
 							13.516: "Construction and deduction of a logic circuit from a truth table. ",
 							13.517: "The gates should be treated as building blocks. The internal structure or circuit of the gates is not required.",
-                        },
-                    },
+						},
+					},
 					13.52: {
-                        "sub-topic": "Sequential logic (A-level only)",
-                        spec: {
-                            13.521: "Counting circuits:\n • Binary counter\n • BCD counter\n • Johnson counter.",
+						"sub-topic": "Sequential logic (A-level only)",
+						spec: {
+							13.521: "Counting circuits:\n • Binary counter\n • BCD counter\n • Johnson counter.",
 							13.522: "Inputs to the circuits, clock, reset, up/down.",
 							13.523: "Outputs from the circuits. ",
 							13.524: "Modulo- n counter from basic counter with the logic driving a reset pin.",
 							13.525: " The gates should be treated as building blocks. The internal structure or circuit of the gates is not required.",
-                        },
-                    },
+						},
+					},
 					13.53: {
-                        "sub-topic": "Astables (A-level only)",
-                        spec: {
-                            13.531: "The astable as an oscillator to provide a clock pulse.",
+						"sub-topic": "Astables (A-level only)",
+						spec: {
+							13.531: "The astable as an oscillator to provide a clock pulse.",
 							13.532: " Clock (pulse) rate (frequency), pulse width, period, duty cycle, mark-to-space ratio. ",
 							13.533: "Variation of running frequency using an external RC network. ",
 							13.534: "Knowledge of a particular circuit or a specific device (eg 555 chip) will not be required",
-                        },
-                    },
+						},
+					},
 				},
 			},
 			13.6: {
 				"sub-topic": "",
 				spec: {
 					13.61: {
-                        "sub-topic": "Principles of communication systems (A-level only)",
-                        spec: {
-                            13.611: "Communication systems, block diagram of 'real time' communication system. ",
+						"sub-topic": "Principles of communication systems (A-level only)",
+						spec: {
+							13.611: "Communication systems, block diagram of 'real time' communication system. ",
 							13.612: "diagram 3.13.6.1",
 							13.613: "Only the purpose of each stage is required. ",
-                        },
-                    },
+						},
+					},
 					13.62: {
-                        "sub-topic": "Transmission media (A-level only)",
-                        spec: {
-                            13.621: "Transmission-path media: metal wire, optic fibre, electromagnetic (radio, microwave).",
+						"sub-topic": "Transmission media (A-level only)",
+						spec: {
+							13.621: "Transmission-path media: metal wire, optic fibre, electromagnetic (radio, microwave).",
 							13.622: " Ground wave, refraction and reflection of sky waves, diffraction of long-wavelength radiation around the Earth’s surface. ",
 							13.623: "Satellite systems and typical transmission frequencies. ",
 							13.624: "Students should recognise that up- and down-links require different frequencies so that the receivers are not de-sensed. ",
 							13.625: "Advantages and disadvantages of various transmission media. Students should consider data transmission rate, cost, and security issues.",
-                        },
-                    },
+						},
+					},
 					13.63: {
-                        "sub-topic": "Time-division multiplexing (A-level only)",
-                        spec: {
-                            13.631: "Basic principles of time-division multiplexing.",
-                        },
-                    },
+						"sub-topic": "Time-division multiplexing (A-level only)",
+						spec: {
+							13.631: "Basic principles of time-division multiplexing.",
+						},
+					},
 					13.64: {
-                        "sub-topic": "Amplitude (AM) and frequency modulation (FM) techniques (A-level only)",
-                        spec: {
-                            13.641: "Principles of modulation; bandwidth.",
+						"sub-topic": "Amplitude (AM) and frequency modulation (FM) techniques (A-level only)",
+						spec: {
+							13.641: "Principles of modulation; bandwidth.",
 							13.642: " Carrier wave and information signal. ",
 							13.643: "Details of modulation circuits for modulating a carrier signal with the information signal will not be required.",
 							13.644: "Graphical representation of both AM and FM modulated signals.",
@@ -1670,8 +1678,8 @@ export const ALevelPhysicsAQA = {
 							13.649: "bandwidth = 2 ∆ f + f M for FM ",
 							13.6410: "Data capacity of a channel.",
 							13.6411: " Comparison of bandwidth availability for various media.",
-                        },
-                    },
+						},
+					},
 				},
 			},
 		},

@@ -3,13 +3,14 @@
 export const AlevelChemistryAQA = {
 	1: {
 		topic: "Physical chemistry",
+		nested: true,
 		topicQuestions: "",
 		specLink: "",
 		code: "AlevelChemistryAQA",
 		name: "Alevel Chemistry AQA",
 		subject: "Chemistry",
 		board: "AQA",
-		level: "Chemistry",
+		level: "Alevel",
 		subs: {
 			1.1: {
 				"sub-topic": "Atomic structure",
