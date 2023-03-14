@@ -5,7 +5,7 @@ import { GCSEChemistryAQA } from "../specifications/GCSEChemistryAQA";
 import { AlevelMathsAQA } from "../specifications/AlevelMathsAQA";
 import { AlevelBiologyAQA } from "../specifications/AlevelBiologyAQA";
 import { AlevelChemistryAQA } from "../specifications/AlevelChemistryAQA";
-import { ALevelPhysicsAQA } from "../specifications/AlevelPhysicsAQA";
+import { AlevelPhysicsAQA } from "../specifications/AlevelPhysicsAQA";
 
 const coursesSelection = {
     GCSEMathsAQA: GCSEMathsAQA,
@@ -15,7 +15,7 @@ const coursesSelection = {
     AlevelMathsAQA: AlevelMathsAQA,
     AlevelBiologyAQA: AlevelBiologyAQA,
     AlevelChemistryAQA: AlevelChemistryAQA,
-    ALevelPhysicsAQA: ALevelPhysicsAQA
+    AlevelPhysicsAQA: AlevelPhysicsAQA
 }
 
 export const specPicker = (courseName) => {

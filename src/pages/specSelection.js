@@ -20,7 +20,7 @@ const data = {
 	],
 	physics: [
 		{ name: "GCSE Physics AQA", code: "GCSEPhysicsAQA" },
-		{ name: "ALevel Physics AQA", code: "ALevelPhysicsAQA" },
+		{ name: "ALevel Physics AQA", code: "AlevelPhysicsAQA" },
 	],
 };
 
