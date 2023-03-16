@@ -227,7 +227,8 @@ export default function MiniDrawer() {
 				</List>
 				<Divider />
 				<List>
-					{[{ text: "Settings", link: "/login", img: "images/settingsImg.png" }, 
+					{[
+						// { text: "Settings", link: "/login", img: "images/settingsImg.png" }, 
 					{text: "Logout", link: "/login", img: "images/logoutImg.png"}].map((item, index) => (
 						<ListItem
 							key={index}

@@ -164,7 +164,7 @@ const Register = (props) => {
 								<label style={{ fontSize: 20 }}>School </label>
 								<br />
 								<input
-									type="school"
+									type="input"
 									id="school"
 									className="form__input"
 									value={school}

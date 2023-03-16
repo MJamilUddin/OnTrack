@@ -56,7 +56,12 @@ export const CourseBox = (props) => {
                 <div style={{width: 320, height: 50, marginTop: 35, marginLeft: 90}}>
                     <text style={{size: 28, fontWeight: 'bold'}}>{props.name}</text>
                     <br />
-                    <text style={{size: 28, color: '#8F8F8F', fontWeight: '600'}}>GCSE</text>
+                    {props.add? 
+                    <text style={{size: 28, color: '#8F8F8F', fontWeight: '600'}}>GCSE, A-level</text>
+                    :
+                    <text style={{size: 28, color: '#8F8F8F', fontWeight: '600'}}>AQA</text>
+                    }
+                    
                 </div>
                 <div style={{display: 'flex', flexDirection: 'row',}}>
                     <div style={{display: 'flex', width: 100, height: 100, borderRadius: 32, justifyContent: 'flex-start', alignItems: 'center', marginLeft: 0}}> 

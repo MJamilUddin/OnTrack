@@ -37,7 +37,7 @@ const TopBar = (props) => {
                     {school}
                 </text>
             </div>
-            <img src="/images/defaultProfile.png" style={{marginLeft: 10, width: 50, height: 50 }} />
+            <img src="/images/defaultUser.png" style={{marginLeft: 20, width: 45, height: 45 }} />
             </div>
 			
 		</div>
