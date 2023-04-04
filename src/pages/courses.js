@@ -23,9 +23,9 @@ const Courses = (props) => {
 					paddingBottom: 50
 				}}>
 				<CourseBox name={"Maths"} image={"math.png"} add={true} navigate={"/selection"} state={{name: "maths"}} />
-				<CourseBox name={"Physics"} image={"math.png"} add={true} navigate={"/selection"} state={{name: "physics"}} />
-				<CourseBox name={"Biology"} image={"math.png"} add={true} navigate={"/selection"} state={{name: "biology"}} />
-				<CourseBox name={"Chemsitry"} image={"math.png"} add={true} navigate={"/selection"} state={{name: "chemistry"}} />
+				<CourseBox name={"Physics"} image={"atoms.png"} add={true} navigate={"/selection"} state={{name: "physics"}} />
+				<CourseBox name={"Biology"} image={"biology.png"} add={true} navigate={"/selection"} state={{name: "biology"}} />
+				<CourseBox name={"Chemsitry"} image={"chemistry.png"} add={true} navigate={"/selection"} state={{name: "chemistry"}} />
 			</div>
 		</div>
 	);

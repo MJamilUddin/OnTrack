@@ -1,12 +1,12 @@
 const coursesSelection = {
     GCSEMathsAQA: "math.png",
-    GCSEPhysicsAQA: "math.png",
-    GCSEBiologyAQA: "math.png",
-    GCSEChemistryAQA: "math.png",
+    GCSEPhysicsAQA: "atoms.png",
+    GCSEBiologyAQA: "biology.png",
+    GCSEChemistryAQA: "chemistry.png",
     AlevelMathsAQA: "math.png",
-    AlevelPhysicsAQA: "math.png",
-    AlevelBiologyAQA: "math.png",
-    AlevelChemistryAQA: "math.png",
+    AlevelPhysicsAQA: "atoms.png",
+    AlevelBiologyAQA: "biology.png",
+    AlevelChemistryAQA: "chemistry.png",
 }
 
 export const imgPicker = (courseName) => {
