@@ -25,34 +25,37 @@ const data = {
 };
 
 const SpecSelection = (props) => {
-	const width = props.width
+	const width = props.width;
 	const userData = useContext(UserContext);
+	let navigate = useNavigate();
 	const { state } = useLocation();
 	const { name } = state;
 	const mapArray = data[name];
+
 	const [courseList, setCourseList] = useState();
+	const [isPressed, setIsPressed] = useState(false);
 
 	useEffect(() => {
-		const getCourseData = async() => {
+		const getCourseData = async () => {
 			const info = await getCoursesList(userData.uid);
 			setCourseList(Object.keys(info));
-		}
+		};
 
 		getCourseData();
-	}, [])
+	}, []);
 
 	const SpecButton = (props) => {
 		const [hover, setHover] = useState(false);
-		let courseIn = false
+		let courseIn = false;
 
 		if (courseList !== undefined) {
 			courseIn = courseList.includes(props.code);
 		}
-		
+
 		return (
 			<div
 				style={{
-					width: width < 300? width - 350 : width - 600,
+					width: width < 300 ? width - 350 : width - 600,
 					backgroundColor: "white",
 					display: "flex",
 					margin: 10,
@@ -60,40 +63,62 @@ const SpecSelection = (props) => {
 					borderRadius: 10,
 					flexDirection: "row",
 					padding: 30,
-					alignItems: 'center',
+					alignItems: "center",
 					justifyContent: "space-between",
 				}}>
-				<text style={{ fontSize: 20, color: "black", fontFamily: 'inter', fontWeight: '500'  }}>
+				<text
+					style={{
+						fontSize: 20,
+						color: "black",
+						fontFamily: "inter",
+						fontWeight: "500",
+					}}>
 					{props.name}
 				</text>
 				<div
 					onMouseEnter={() => setHover(true)}
 					onMouseLeave={() => setHover(false)}
 					style={{
-						display: 'flex',
+						display: "flex",
 						width: 90,
 						height: 40,
 						borderRadius: 10,
-						backgroundColor: hover || courseIn? "green" : "#FABB18",
+						backgroundColor: hover || courseIn ? "green" : "#FABB18",
 						marginRight: 20,
-						justifyContent: 'center',
-						alignItems: 'center'
+						justifyContent: "center",
+						alignItems: "center",
 					}}
 					onClick={() => {
 						addSubCollection(userData.uid, props.code);
-						setCourseList(prev => [...prev, props.code])
+						setCourseList((prev) => [...prev, props.code]);
+						setIsPressed(true);
 					}}>
-						{courseIn? 
-						<text style={{ fontWeight: 900, fontSize: 16, color: 'black' }}>Added</text>
-						:
-						<text style={{ fontWeight: 900, fontSize: 16, color: 'black' }}>Add</text>
-						}
-					
+					{courseIn ? (
+						<text style={{ fontWeight: 900, fontSize: 16, color: "black" }}>
+							Added
+						</text>
+					) : (
+						<text style={{ fontWeight: 900, fontSize: 16, color: "black" }}>
+							Add
+						</text>
+					)}
 				</div>
 			</div>
 		);
-	}
+	};
 
+	const BottomMessage = () => {
+		return (
+			<p
+				style={{ marginLeft: 30, fontSize: 18, fontWeight: "700" }}
+				onClick={() => {
+					navigate("/home");
+				}}>
+				This course has been added to your
+				<text style={{ color: "purple" }}> Dashboard!</text>
+			</p>
+		);
+	};
 
 	return (
 		<>
@@ -103,18 +128,18 @@ const SpecSelection = (props) => {
 					flexDirection: "column",
 					marginTop: 0,
 					marginLeft: 50,
-					width: 'auto',
-					height: props.height
+					width: "auto",
+					height: props.height,
 				}}>
-				<h2 style={{marginLeft: 30}}>Specifications</h2>	
+				<h2 style={{ marginLeft: 30 }}>Specifications</h2>
 				{mapArray.map((course) => {
-					return (
-					<SpecButton name={course.name} code={course.code} />
-					)
+					return <SpecButton name={course.name} code={course.code} />;
 				})}
+
+				{isPressed ? <BottomMessage /> : null}
 			</div>
 		</>
 	);
-}
+};
 
 export default SpecSelection;

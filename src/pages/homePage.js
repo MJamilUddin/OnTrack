@@ -64,6 +64,7 @@ const HomePage = (props) => {
 	return (
 		<div style={{ marginLeft: 30, width: "auto", height: height }}>
 			<h2 style={{ marginLeft: 50 }}>My Subjects</h2>
+			<h4 style={{ marginLeft: 50 }}>Click on a subject to complete the specification, qizzes and exam questions!</h4>
 			{courseInfo !== null ? (
 				<div
 					style={{
